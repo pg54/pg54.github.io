@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06726cc9-cee4-4f31-848c-41f3a5caa509" name="Default" comment="" />
+    <list default="true" id="06726cc9-cee4-4f31-848c-41f3a5caa509" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838815183801.html" afterPath="$PROJECT_DIR$/14838815183801.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838815360319.html" afterPath="$PROJECT_DIR$/14838815360319.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/all.html" afterPath="$PROJECT_DIR$/all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives.html" afterPath="$PROJECT_DIR$/archives.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atom.xml" afterPath="$PROJECT_DIR$/atom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog.html" afterPath="$PROJECT_DIR$/blog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitemap.xml" afterPath="$PROJECT_DIR$/sitemap.xml" />
+    </list>
     <ignored path="MWeb.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,12 +157,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1483887188380</updated>
-      <workItem from="1483887189866" duration="2287000" />
+      <workItem from="1483887189866" duration="2884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2287000" />
+    <option name="totallyTimeSpent" value="2884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="154" y="29" width="1057" height="767" extended-state="0" />
