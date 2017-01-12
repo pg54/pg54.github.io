@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	Node.js 实战 - pg54
+  	数组，字符串的处理 - pg54
   	
 	</title>
 
@@ -118,13 +118,61 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">Node.js 实战</h1>
+		<h1 class="title" itemprop="name">数组，字符串的处理</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<p><a href="http://wiki.jikexueyuan.com/project/node-lessons/eventproxy.html">http://wiki.jikexueyuan.com/project/node-lessons/eventproxy.html</a></p>
+			<h3 id="toc_0">数组方法</h3>
 
-<h1 id="toc_0">一起学nodejs</h1>
+<h4 id="toc_1">Array.concat(),不扁平化数组</h4>
 
-<p><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb">https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb</a></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841302672283.jpg" alt=""/></p>
+
+<h4 id="toc_2">Array.join() 可指定一个可选的字符串在生成的字符串中来分割数组的各个元素。如果不指定，默认使用逗号。</h4>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841304555903.jpg" alt=""/></p>
+
+<p>在ES5中，有三种for循环，分别是：<br/>
+* 一般for循环<br/>
+* for-in<br/>
+* for each</p>
+
+<p>1.一般for循环效率更高的写法<br/>
+<code><br/>
+const arr = [1,2,3];<br/>
+for (let i = 0,len = arr.length;i&lt; len;i++) {<br/>
+   console.log(arr[i]);<br/>
+}<br/>
+</code><br/>
+2.for-in的真相<br/>
+Array在JavaScript中是一个对象，Array的索引是属性名。</p>
+
+<pre><code>const arr = [1, 2, 3];
+arr.name = &quot;Hello world&quot;;
+let index;
+for(index in arr) {
+    console.log(&quot;arr[&quot; + index + &quot;] = &quot; + arr[index]);
+}
+</code></pre>
+
+<pre><code>Array.prototype.fatherName = &quot;Father&quot;;
+const arr = [1, 2, 3];
+arr.name = &quot;Hello world&quot;;
+let index;
+for(index in arr) {
+    console.log(&quot;arr[&quot; + index + &quot;] = &quot; + arr[index]);
+}
+</code></pre>
+
+<p>3 .number转字符串<br/>
+1. <br/>
+<code><br/>
+var str = number + &quot;&quot;<br/>
+</code><br/>
+2.字符串函数<br/>
+<code>var str = String(number)<br/>
+</code><br/>
+3.number的toSting()方法</p>
+
+<pre><code class="language-var"></code></pre>
 
 		</div>
 	</article>

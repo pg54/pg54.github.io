@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	Node.js 实战 - pg54
+  	从URI到页面生成发生了什么 - pg54
   	
 	</title>
 
@@ -118,13 +118,77 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">Node.js 实战</h1>
+		<h1 class="title" itemprop="name">从URI到页面生成发生了什么</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<p><a href="http://wiki.jikexueyuan.com/project/node-lessons/eventproxy.html">http://wiki.jikexueyuan.com/project/node-lessons/eventproxy.html</a></p>
+			<h3 id="toc_0">web的访问（网页的访问，视频，音频有不同）</h3>
 
-<h1 id="toc_0">一起学nodejs</h1>
+<p><img src="media/14839727830717/14839732760762.jpg" alt=""/></p>
 
-<p><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb">https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb</a></p>
+<h4 id="toc_1">DNS(domain name system)</h4>
+
+<p><img src="media/14839727830717/14839735409271.jpg" alt=""/></p>
+
+<h3 id="toc_2">ajax的全称</h3>
+
+<ul>
+<li>Asynchronous Javascript And XML</li>
+</ul>
+
+<h3 id="toc_3">DNS</h3>
+
+<ul>
+<li>Domain Name System (键值对，域名，网站名称系统？）
+<img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_4.png" alt=""/></li>
+</ul>
+
+<h3 id="toc_4">1. 浏览器http打包请求</h3>
+
+<h3 id="toc_5">2. 创建TCP连接</h3>
+
+<h4 id="toc_6">socket套接字，确定每个用户靠的</h4>
+
+<h3 id="toc_7">3. 浏览器发送请求</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_5.png" alt=""/></p>
+
+<h3 id="toc_8">4. 服务器交给相关进程处理请求</h3>
+
+<h3 id="toc_9">服务器把处理请求的任务交给不同的程序处理</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_6.png" alt=""/></p>
+
+<h3 id="toc_10">5. 服务器响应请求，发送浏览器</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_7.png" alt=""/></p>
+
+<p>request.query.name 即?a=xxxx&amp;b=sss<br/>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_8.png" alt=""/></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_9.png" alt=""/></p>
+
+<h3 id="toc_11">6. 浏览器生成渲染树和DOM树渲染页面</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_10.png" alt=""/></p>
+
+<h3 id="toc_12">7. 非常规响应处理</h3>
+
+<h3 id="toc_13">重点</h3>
+
+<p>1.CSRF (Cross site request forgery)跨站请求伪造</p>
+
+<h4 id="toc_14">例子</h4>
+
+<p>视频网站赠送礼物的接口<br/>
+<code><br/>
+https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
+</code><br/>
+（1）：一张吸引力的照片，点击后向这个接口发送请求<br/>
+（2）：比如评论页面放一个<br/>
+<code><br/>
+&lt;img src=&quot;https://xxxx.com/gift/send?target=someone&amp;giftID=ab231&quot;&gt;<br/>
+</code></p>
+
+<p>(3):</p>
 
 		</div>
 	</article>

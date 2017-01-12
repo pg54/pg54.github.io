@@ -4,7 +4,7 @@
   <title><![CDATA[pg54]]></title>
   <link href="https://pg54.github.io/atom.xml" rel="self"/>
   <link href="https://pg54.github.io/"/>
-  <updated>2017-01-09T12:52:27+08:00</updated>
+  <updated>2017-01-09T13:11:58+08:00</updated>
   <id>https://pg54.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -14,6 +14,181 @@
 
   
   <entry>
+    <title type="html"><![CDATA[ICON的处理]]></title>
+    <link href="https://pg54.github.io/14841885139585.html"/>
+    <updated>2017-01-12T10:35:13+08:00</updated>
+    <id>https://pg54.github.io/14841885139585.html</id>
+    <content type="html"><![CDATA[
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841402027530.jpg" alt=""/></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841404661053.jpg" alt=""/><br/>
+css sprites generator</p>
+
+<p>icon font</p>
+
+<p>&amp;后面接Unicode码</p>
+
+<p>BFC</p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422407480.jpg" alt=""/></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422838818.jpg" alt=""/></p>
+
+<p>NPM SVG SPRITES<br/>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/14841433266751.jpg" alt=""/></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841436337388.jpg" alt=""/></p>
+
+<p>webpack</p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841461464583.jpg" alt=""/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[数组，字符串的处理]]></title>
+    <link href="https://pg54.github.io/14841299770735.html"/>
+    <updated>2017-01-11T18:19:37+08:00</updated>
+    <id>https://pg54.github.io/14841299770735.html</id>
+    <content type="html"><![CDATA[
+<h3 id="toc_0">数组方法</h3>
+
+<h4 id="toc_1">Array.concat(),不扁平化数组</h4>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841302672283.jpg" alt=""/></p>
+
+<h4 id="toc_2">Array.join() 可指定一个可选的字符串在生成的字符串中来分割数组的各个元素。如果不指定，默认使用逗号。</h4>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841304555903.jpg" alt=""/></p>
+
+<p>在ES5中，有三种for循环，分别是：<br/>
+* 一般for循环<br/>
+* for-in<br/>
+* for each</p>
+
+<p>1.一般for循环效率更高的写法<br/>
+<code><br/>
+const arr = [1,2,3];<br/>
+for (let i = 0,len = arr.length;i&lt; len;i++) {<br/>
+   console.log(arr[i]);<br/>
+}<br/>
+</code><br/>
+2.for-in的真相<br/>
+Array在JavaScript中是一个对象，Array的索引是属性名。</p>
+
+<pre><code>const arr = [1, 2, 3];
+arr.name = &quot;Hello world&quot;;
+let index;
+for(index in arr) {
+    console.log(&quot;arr[&quot; + index + &quot;] = &quot; + arr[index]);
+}
+</code></pre>
+
+<pre><code>Array.prototype.fatherName = &quot;Father&quot;;
+const arr = [1, 2, 3];
+arr.name = &quot;Hello world&quot;;
+let index;
+for(index in arr) {
+    console.log(&quot;arr[&quot; + index + &quot;] = &quot; + arr[index]);
+}
+</code></pre>
+
+<p>3 .number转字符串<br/>
+1. <br/>
+<code><br/>
+var str = number + &quot;&quot;<br/>
+</code><br/>
+2.字符串函数<br/>
+<code>var str = String(number)<br/>
+</code><br/>
+3.number的toSting()方法</p>
+
+<pre><code class="language-var"></code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[从URI到页面生成发生了什么]]></title>
+    <link href="https://pg54.github.io/14839727830717.html"/>
+    <updated>2017-01-09T22:39:43+08:00</updated>
+    <id>https://pg54.github.io/14839727830717.html</id>
+    <content type="html"><![CDATA[
+<h3 id="toc_0">web的访问（网页的访问，视频，音频有不同）</h3>
+
+<p><img src="media/14839727830717/14839732760762.jpg" alt=""/></p>
+
+<h4 id="toc_1">DNS(domain name system)</h4>
+
+<p><img src="media/14839727830717/14839735409271.jpg" alt=""/></p>
+
+<h3 id="toc_2">ajax的全称</h3>
+
+<ul>
+<li>Asynchronous Javascript And XML</li>
+</ul>
+
+<h3 id="toc_3">DNS</h3>
+
+<ul>
+<li>Domain Name System (键值对，域名，网站名称系统？）
+<img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_4.png" alt=""/></li>
+</ul>
+
+<h3 id="toc_4">1. 浏览器http打包请求</h3>
+
+<h3 id="toc_5">2. 创建TCP连接</h3>
+
+<h4 id="toc_6">socket套接字，确定每个用户靠的</h4>
+
+<h3 id="toc_7">3. 浏览器发送请求</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_5.png" alt=""/></p>
+
+<h3 id="toc_8">4. 服务器交给相关进程处理请求</h3>
+
+<h3 id="toc_9">服务器把处理请求的任务交给不同的程序处理</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_6.png" alt=""/></p>
+
+<h3 id="toc_10">5. 服务器响应请求，发送浏览器</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_7.png" alt=""/></p>
+
+<p>request.query.name 即?a=xxxx&amp;b=sss<br/>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_8.png" alt=""/></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_9.png" alt=""/></p>
+
+<h3 id="toc_11">6. 浏览器生成渲染树和DOM树渲染页面</h3>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/Snip20161228_10.png" alt=""/></p>
+
+<h3 id="toc_12">7. 非常规响应处理</h3>
+
+<h3 id="toc_13">重点</h3>
+
+<p>1.CSRF (Cross site request forgery)跨站请求伪造</p>
+
+<h4 id="toc_14">例子</h4>
+
+<p>视频网站赠送礼物的接口<br/>
+<code><br/>
+https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
+</code><br/>
+（1）：一张吸引力的照片，点击后向这个接口发送请求<br/>
+（2）：比如评论页面放一个<br/>
+<code><br/>
+&lt;img src=&quot;https://xxxx.com/gift/send?target=someone&amp;giftID=ab231&quot;&gt;<br/>
+</code></p>
+
+<p>(3):</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Node.js 实战]]></title>
     <link href="https://pg54.github.io/14838995698291.html"/>
     <updated>2017-01-09T02:19:29+08:00</updated>
@@ -21,11 +196,15 @@
     <content type="html"><![CDATA[
 <p><a href="http://wiki.jikexueyuan.com/project/node-lessons/eventproxy.html">http://wiki.jikexueyuan.com/project/node-lessons/eventproxy.html</a></p>
 
+<h1 id="toc_0">一起学nodejs</h1>
+
+<p><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb">https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb</a></p>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Heroku 的使用]]></title>
+    <title type="html"><![CDATA[建立字母哥的网站 Heroku 的使用]]></title>
     <link href="https://pg54.github.io/14838989155437.html"/>
     <updated>2017-01-09T02:08:35+08:00</updated>
     <id>https://pg54.github.io/14838989155437.html</id>
@@ -36,16 +215,26 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[request 请求到的数据为乱码，求解决]]></title>
+    <title type="html"><![CDATA[electron项目]]></title>
     <link href="https://pg54.github.io/14838942123284.html"/>
     <updated>2017-01-09T00:50:12+08:00</updated>
     <id>https://pg54.github.io/14838942123284.html</id>
     <content type="html"><![CDATA[
+<p>京东地址<a href="https://item.jd.com/10929693753.html">https://item.jd.com/10929693753.html</a></p>
+
+<p>大批量图片下载<a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a></p>
+
+<h2 id="toc_0">request 请求到的数据为乱码，求解决</h2>
+
 <p><a href="https://cnodejs.org/topic/545de1e1a68535a174fe51b5">https://cnodejs.org/topic/545de1e1a68535a174fe51b5</a></p>
 
-<h2 id="toc_0">Nodejs大批量下载图片入坑指南(使用async和bagpipe处理大并发量请求)</h2>
+<h2 id="toc_1">Nodejs大批量下载图片入坑指南(使用async和bagpipe处理大并发量请求)</h2>
 
 <p><a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a></p>
+
+<h2 id="toc_2">七牛云js注入</h2>
+
+<p><img src="media/14838942123284/14841883960285.jpg" alt=""/></p>
 
 ]]></content>
   </entry>
@@ -56,17 +245,27 @@
     <updated>2017-01-08T21:18:56+08:00</updated>
     <id>https://pg54.github.io/14838815360319.html</id>
     <content type="html"><![CDATA[
+<h3 id="toc_0">1.成功发布</h3>
+
+<p><img src="media/14838815360319/14839023570342.jpg" alt=""/><br/>
+git </p>
+
 <ol>
-<li><p>成功发布<br/>
-<img src="media/14838815360319/14839023570342.jpg" alt=""/><br/>
-git </p></li>
-<li><p>git remove -v<br/>
-<img src="media/14838815360319/14838909388203.jpg" alt=""/><br/>
-``<br/>
-<a href="http://ruby-china.org/topics/4768">http://ruby-china.org/topics/4768</a></p></li>
+<li>git remove -v
+<img src="media/14838815360319/14838909388203.jpg" alt=""/>
+``
+<a href="http://ruby-china.org/topics/4768">http://ruby-china.org/topics/4768</a></li>
 </ol>
 
 <p>git head,git fetch的理解</p>
+
+<p>git push -u origin mster与git push origin master 的区别 ？</p>
+
+<h3 id="toc_1">2.fetch的作用</h3>
+
+<p>修改github上的代码，fetch一下，</p>
+
+<p><img src="media/14838815360319/14841028443135.jpg" alt=""/></p>
 
 <p><img src="http://ogtnnj4ck.bkt.clouddn.com/7bc9d62a6059252d8dcc7efd349b033b5ab5b924.jpg" alt="7bc9d62a6059252d8dcc7efd349b033b5ab5b924"/><br/>
 .idea是webstorm的文件<br/>
