@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	ICON的处理 - pg54
+  	getElementsByClassName()兼容性解决方法 - pg54
   	
 	</title>
 
@@ -118,38 +118,49 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">ICON的处理</h1>
+		<h1 class="title" itemprop="name">getElementsByClassName()兼容性解决方法</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<h2 id="toc_0">SVG</h2>
+			<p>原生的方法，是getElementById()和getElementsByTagName()，这两个不会有兼容问题，但是遇到class的问题还是没法解决。所以这里总结两种封装方法，可以用它们来获取指定的class元素。当然，对于现代浏览器开发，还可以使用querySelector()和querySelectorAll()，他们的功能更加强大。</p>
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg">https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg</a></p>
+<p>1.数组遍历</p>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841402027530.jpg" alt=""/></p>
+<pre><code> 1 function getByClass(sClass,oParent){
+ 2         
+ 3     var parent = oParent || document;
+ 4     var aEles = parent.getElementsByTagName(&#39;*&#39;);
+ 5     var arr = [];
+ 6     
+ 7     for(var i=0; i&lt;aEles.length; i++){
+ 8         
+ 9         var aClass = aEles[i].className.split(&#39; &#39;);
+10         
+11         for(var j=0; j&lt;aClass.length; j++){
+12             if(aClass[j] == sClass){
+13             
+14                 arr.push(aEles[i]);
+15                 
+16             }    
+17         }
+18     }
+19     return arr;
+20 }
+</code></pre>
 
-<p><a href="https://draeton.github.io/stitches/">https://draeton.github.io/stitches/</a></p>
+<p>2.正则匹配的方法</p>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841404661053.jpg" alt=""/><br/>
-css sprites generator</p>
-
-<p>icon font</p>
-
-<p>&amp;后面接Unicode码<br/>
-<a href="https://icomoon.io/app/#/select">https://icomoon.io/app/#/select</a></p>
-
-<p>BFC</p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422407480.jpg" alt=""/></p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422838818.jpg" alt=""/></p>
-
-<p>NPM SVG SPRITES<br/>
-<img src="http://ogtnnj4ck.bkt.clouddn.com/14841433266751.jpg" alt=""/></p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841436337388.jpg" alt=""/></p>
-
-<p>学会webpack工程化就好</p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841461464583.jpg" alt=""/></p>
+<pre><code> 1 function getElementsByClassName(oParent, sClass){
+ 2     var aEle = oParent.getElemnetsByTagName(&#39;*&#39;);
+ 3     var result = [];
+ 4     var re = new RegExp(&#39;\\b&#39; + sClass + &#39;\\b&#39;, &#39;i&#39;);
+ 5     
+ 6     for(var i=0; i&lt;aEle.length; i++){
+ 7         if(re.test(aEle[i].className)){
+ 8             result.push(aEle[i]);    
+ 9         }    
+10     }
+11     return result;
+12 }
+</code></pre>
 
 		</div>
 	</article>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	ICON的处理 - pg54
+  	跨域 - pg54
   	
 	</title>
 
@@ -118,38 +118,111 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">ICON的处理</h1>
+		<h1 class="title" itemprop="name">跨域</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<h2 id="toc_0">SVG</h2>
+			<h2 id="toc_0">跨域</h2>
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg">https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg</a></p>
+<h3 id="toc_1">一般ajax请求</h3>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841402027530.jpg" alt=""/></p>
+<pre><code>var xhr = new = XMLHttpRequest();
+xhr.open(&quot;get&quot;,url,true);
+</code></pre>
 
-<p><a href="https://draeton.github.io/stitches/">https://draeton.github.io/stitches/</a></p>
+<pre><code>xhr.send();
+</code></pre>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841404661053.jpg" alt=""/><br/>
-css sprites generator</p>
+<pre><code>xhr.onreadystastechange = function(){
+    if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+    //处理xhr.responseText
+    
+    }
+}
+</code></pre>
 
-<p>icon font</p>
+<h3 id="toc_2">同源策略（same origin policy）</h3>
 
-<p>&amp;后面接Unicode码<br/>
-<a href="https://icomoon.io/app/#/select">https://icomoon.io/app/#/select</a></p>
+<ul>
+<li>同协议：如都是http或者HTTPS</li>
+<li>同域名：如都是<a href="http://jirengu.com/a%E5%92%8Chttp://jirengu.com/b">http://jirengu.com/a和http://jirengu.com/b</a></li>
+<li>同端口：如都是80端口（默认都是80端口）</li>
+</ul>
 
-<p>BFC</p>
+<h4 id="toc_3">same origin policy</h4>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422407480.jpg" alt=""/></p>
+<p>1 直接加载一个源， <br/>
+ <code><br/>
+ &lt;script src=&quot;&quot; &gt;<br/>
+</code><br/>
+获取 function name(内容)</p>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422838818.jpg" alt=""/></p>
+<ul>
+<li><p>下面有一个 function name的函数，函数内有数据处理逻辑</p></li>
+<li></li>
+</ul>
 
-<p>NPM SVG SPRITES<br/>
-<img src="http://ogtnnj4ck.bkt.clouddn.com/14841433266751.jpg" alt=""/></p>
+<pre><code> &lt;script&gt;
+$(&#39;.change&#39;).addEventListener(&#39;click&#39;,function () {
+    var script = document.createElement(&#39;script&#39;);
+    script.src = &#39;http://a.jrg.com:8080/getNews?callback=appendHtml&#39;;
+    document.head.appendChild(script);
+})
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841436337388.jpg" alt=""/></p>
+function appendHtml(news) {
+    var html = &#39;&#39;;
+    for(var i=0;i&lt;news.length;i++){
+        html += &#39;&lt;li&gt;&#39;+news[i]+&#39;&lt;/li&gt;li&gt;&#39;;
+    }
+    console.log(html);
+    $(&#39;.news&#39;).innerHTML = html;
+}
+function $(id) {
+    return document.querySelector(id);
+}
+&lt;/script&gt;
+</code></pre>
 
-<p>学会webpack工程化就好</p>
+<ul>
+<li>服务端</li>
+</ul>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841461464583.jpg" alt=""/></p>
+<pre><code>app.get(&#39;/getNews&#39;,function (req,res) {
+    var news = [
+        &#39;one day 0&#39;,
+        &#39;one day 1&#39;,
+        &#39;one day 2&#39;,
+        &#39;one day 3&#39;,
+        &#39;one day 4&#39;,
+        &#39;one day 5&#39;,
+        &#39;one day 6&#39;,
+        &#39;one day 7&#39;,
+        &#39;one day 8&#39;
+    ]
+    var data = [];
+    for(var i=0;i&lt;3;i++) {
+        var index = parseInt(Math.random()*news.length);
+        data.push(news[index]);
+        news.splice(index,1);
+    }
+    var cb = req.query.callback;
+    res.send(cb+&#39;(&#39;+ JSON.stringify(data)+&#39;)&#39;);
+})
+</code></pre>
+
+<h3 id="toc_4">CORS (Cross-Origin Resource Sharing)全称是跨域资源共享，IE10以上</h3>
+
+<h3 id="toc_5">降域跨域</h3>
+
+<p><img src="media/14842009870686/14842134816431.jpg" alt=""/></p>
+
+<p><img src="media/14842009870686/14844007001064.jpg" alt=""/></p>
+
+<pre><code>
+</code></pre>
+
+<p><a href="http://codeguide.bootcss.com/">http://codeguide.bootcss.com/</a></p>
+
+<p>网站<br/>
+<a href="http://fantasyui.com/oxygen/">http://fantasyui.com/oxygen/</a></p>
 
 		</div>
 	</article>

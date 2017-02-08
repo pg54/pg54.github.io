@@ -122,6 +122,802 @@
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
+				<time datetime="2017-02-06T15:54:31+08:00" itemprop="datePublished">2017/2/6</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14863676717828.html" itemprop="url">
+		</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>127.0.0.1 a.jrg.com<br/>
+127.0.0.1 b.jrg.com<br/>
+127.0.0.1 jrg.com<br/>
+192.30.253.112 github.com<br/>
+151.101.88.249 github.global.ssl.fastly.net</p>
+
+<p><img src="media/14863676717828/14863682732916.jpg" alt=""/></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-02-06T13:40:09+08:00" itemprop="datePublished">2017/2/6</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14863596093783.html" itemprop="url">
+		Vue.js</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h3 id="toc_0">template</h3>
+
+<p><img src="media/14863596093783/14863596325581.jpg" alt=""/></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-27T15:45:11+08:00" itemprop="datePublished">2017/1/27</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14855031116408.html" itemprop="url">
+		JS数组去重</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">js的数据类型</h2>
+
+<h3 id="toc_1">数字</h3>
+
+<h4 id="toc_2">整型直接量</h4>
+
+<h4 id="toc_3">浮点型直接量</h4>
+
+<h4 id="toc_4">js中的算术运算</h4>
+
+<h3 id="toc_5">文本</h3>
+
+<h4 id="toc_6">字符串直接量</h4>
+
+<h4 id="toc_7">转义字符</h4>
+
+<h4 id="toc_8">正则表达式</h4>
+
+<h3 id="toc_9">布尔值</h3>
+
+<h3 id="toc_10">null和undefined</h3>
+
+<h3 id="toc_11">NaN</h3>
+
+<h3 id="toc_12">数组</h3>
+
+<h3 id="toc_13">对象</h3>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-24T23:11:15+08:00" itemprop="datePublished">2017/1/24</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14852706757930.html" itemprop="url">
+		http://www.cnblogs.com/zhangxiaohang/p/5499247.html</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-24T22:40:54+08:00" itemprop="datePublished">2017/1/24</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14852688543760.html" itemprop="url">
+		getElementsByClassName()兼容性解决方法</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>原生的方法，是getElementById()和getElementsByTagName()，这两个不会有兼容问题，但是遇到class的问题还是没法解决。所以这里总结两种封装方法，可以用它们来获取指定的class元素。当然，对于现代浏览器开发，还可以使用querySelector()和querySelectorAll()，他们的功能更加强大。</p>
+
+<p>1.数组遍历</p>
+
+<pre><code> 1 function getByClass(sClass,oParent){
+ 2         
+ 3     var parent = oParent || document;
+ 4     var aEles = parent.getElementsByTagName(&#39;*&#39;);
+ 5     var arr = [];
+ 6     
+ 7     for(var i=0; i&lt;aEles.length; i++){
+ 8         
+ 9         var aClass = aEles[i].className.split(&#39; &#39;);
+10         
+11         for(var j=0; j&lt;aClass.length; j++){
+12             if(aClass[j] == sClass){
+13             
+14                 arr.push(aEles[i]);
+15                 
+16             }    
+17         }
+18     }
+19     return arr;
+20 }
+</code></pre>
+
+<p>2.正则匹配的方法</p>
+
+<pre><code> 1 function getElementsByClassName(oParent, sClass){
+ 2     var aEle = oParent.getElemnetsByTagName(&#39;*&#39;);
+ 3     var result = [];
+ 4     var re = new RegExp(&#39;\\b&#39; + sClass + &#39;\\b&#39;, &#39;i&#39;);
+ 5     
+ 6     for(var i=0; i&lt;aEle.length; i++){
+ 7         if(re.test(aEle[i].className)){
+ 8             result.push(aEle[i]);    
+ 9         }    
+10     }
+11     return result;
+12 }
+</code></pre>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-22T18:42:52+08:00" itemprop="datePublished">2017/1/22</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14850817727599.html" itemprop="url">
+		BAIDU IFE</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">项目表</h2>
+
+<p><a href="http://ife.baidu.com/2016/task/all">http://ife.baidu.com/2016/task/all</a></p>
+
+<p><a href="mailto:995120132@qq.com">995120132@qq.com</a></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-20T16:37:59+08:00" itemprop="datePublished">2017/1/20</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14849014794672.html" itemprop="url">
+		scrollreveal的使用</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p><a href="http://www.ui3g.com/code/uicode-1626.html">http://www.ui3g.com/code/uicode-1626.html</a></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-18T23:26:35+08:00" itemprop="datePublished">2017/1/18</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14847531950663.html" itemprop="url">
+		bootstrap</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>手机:col-xs-*<br/>
+平板：col-md-*<br/>
+桌面电脑：col-md-*<br/>
+高分辨率设备：col-lg-*</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-18T09:26:58+08:00" itemprop="datePublished">2017/1/18</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14847028185426.html" itemprop="url">
+		JavaScript 作用域和变量提升</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p><a href="http://www.jianshu.com/p/d4bde266e06d">http://www.jianshu.com/p/d4bde266e06d</a></p>
+
+<h2 id="toc_0">Scrope</h2>
+
+<p>JavaScript中的作用域是依靠函数生成的<br/>
+* 全局作用域<br/>
+* 函数作用域</p>
+
+<pre><code>var i = 100;
+    function outer() {
+        console.log(i);
+        function inner() {
+            console.log(i);
+            var i  = 1;
+            console.log(i);
+        }
+        inner();
+        console.log(i);
+    }
+    outer();
+</code></pre>
+
+<h2 id="toc_1">Hoisting</h2>
+
+<blockquote>
+<p>Hoisting is a term you will not find in the JavaScript docs. Hoisting was thought up as a general way of thinking about how execution context (specifically the creation and execution phases) work in JavaScript. But, hoisting can lead to misunderstandings. For example, hoisting teaches that variable and function declarations are physically moved to the top your coding, but this is not what happens at all. What does happen is the variable and function declarations are put into memory during the compile phase, but stays exactly where you typed it in your coding.<br/><br/>
+JavaScript only hoists declarations, not initializations. If you are using a variable that is declared and initialized after using it, the value will be undefined. The below two examples demonstrate the same behavior.</p>
+</blockquote>
+
+<pre><code>var i = 1;
+var j = 9;
+console.log(i+&#39;&#39;+j);
+VM1336:3 19
+undefined
+var p = 1;
+console.log(p+&#39;&#39;+o);
+var o = 10;
+VM1509:2 1undefined
+undefined
+</code></pre>
+
+<h3 id="toc_2">情景1：重复声明</h3>
+
+<pre><code>var a = 10;
+    console.log(a);
+    if (true) {
+        var a = 20;
+        console.log(a);  //20
+
+    }
+    console.log(a);  //20
+</code></pre>
+
+<h3 id="toc_3">情景4: 函数与函数重复声明</h3>
+
+<pre><code>console.log(foo);
+    function foo(n) {
+        return n + 2;
+        
+    }
+    function foo() {
+        return n + 1;
+    }
+
+</code></pre>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-16T16:38:52+08:00" itemprop="datePublished">2017/1/16</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14845559322210.html" itemprop="url">
+		Catch</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p><a href="https://www.baidu.com/s?ie=UTF-8&amp;wd=html%20float%20left%20right%20%E9%AB%98%E5%BA%A6">https://www.baidu.com/s?ie=UTF-8&amp;wd=html%20float%20left%20right%20%E9%AB%98%E5%BA%A6</a></p>
+
+<h2 id="toc_0">ps</h2>
+
+<p><a href="http://www.maiziedu.com/course/231-2019/">http://www.maiziedu.com/course/231-2019/</a><br/>
+<img src="media/14845559322210/14846298863005.jpg" alt=""/><br/>
+调出属性面板 F8<br/>
+t 可以查看文字<br/>
+m 方框可以查看距离</p>
+
+<p><img src="media/14845559322210/14847104149276.jpg" alt=""/></p>
+
+<p>按 c 选择切边工具</p>
+
+<p>自动切片<br/>
+<img src="media/14845559322210/14847196706120.jpg" alt=""/></p>
+
+<p><img src="media/14845559322210/14847197184714.jpg" alt=""/></p>
+
+<p><img src="media/14845559322210/14847197694059.jpg" alt=""/></p>
+
+<p><img src="media/14845559322210/14847198297738.jpg" alt=""/></p>
+
+<p>qq浏览器允许弹窗<br/>
+<img src="media/14845559322210/14846339121432.jpg" alt=""/></p>
+
+<pre><code>&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;task_2-18&lt;/title&gt;
+    &lt;style&gt;
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    #ctrl {
+        margin: 5px 0 20px;
+    }
+    #ctrl button {
+        padding: 3px;
+    }
+    #list {
+        display: flex;
+        align-items: flex-end;
+    }
+    #list div {
+        width: 20px;
+        margin: 0 2px;
+        background-color: red;
+        color: white;
+        line-height: 15px;
+        cursor: pointer;
+        bottom: 0;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;ctrl&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;inputNum&quot;&gt;
+    &lt;button id=&quot;left_in&quot;&gt;左侧入&lt;/button&gt;
+    &lt;button id=&quot;right_in&quot;&gt;右侧入&lt;/button&gt;
+    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+    &lt;button id=&quot;left_out&quot;&gt;左侧出&lt;/button&gt;
+    &lt;button id=&quot;right_out&quot;&gt;右侧出&lt;/button&gt;
+    &lt;button id=&quot;sort_num&quot;&gt;排序&lt;/button&gt;
+    &lt;button id=&quot;randomBtn&quot;&gt;生成随机数&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;list&quot;&gt;
+&lt;/div&gt;
+&lt;script&gt;
+window.onload = function () {
+    document.getElementById(&#39;left_in&#39;).onclick = leftIn;
+    document.getElementById(&#39;right_in&#39;).onclick = rightIn;
+    document.getElementById(&#39;left_out&#39;).onclick = leftOut;
+    document.getElementById(&#39;right_out&#39;).onclick = rightOut;
+    document.getElementById(&#39;randomBtn&#39;).onclick = randomData;
+}
+var list = document.getElementById(&#39;list&#39;);
+var numTest = /^\d{2,3}$/;//限制输入的数字在10-100
+var innerSpan = list.getElementsByTagName(&#39;div&#39;);
+function leftIn() {
+    var num = document.getElementById(&#39;inputNum&#39;).value;
+    var newSpan = document.createElement(&#39;div&#39;);
+    newSpan.style.height = parseInt(num) + &#39;px&#39;;
+    if(num &gt; 100||!numTest.test(num)) {
+        alert(&#39;Number is Wrong&#39;);
+    }else if (innerSpan.length &gt; 60) {
+        alert(&#39;队列数量超出60&#39;)
+    }//队列元素数量最多限制为60个，当超过60个时，添加元素时alert出提示
+    else if(!innerSpan[0]) {
+        list.appendChild(newSpan);
+    } else {
+        list.insertBefore(newSpan,innerSpan[0])
+    }
+}
+function rightIn() {
+    var num = document.getElementById(&#39;inputNum&#39;).value;
+    var newSpan = document.createElement(&#39;div&#39;);
+    newSpan.style.height = parseInt(num) + &#39;px&#39;;
+    if (!numTest.test(num)) {
+        alert(&#39;Number is Wrong&#39;);
+    } else {
+        list.appendChild(newSpan);
+    }   
+}
+function leftOut() {
+    var listSpan = document.getElementsByTagName(&#39;div&#39;)[0];
+    if (!listSpan) {
+        alert(&#39;No Number&#39;);
+    } else {
+        list.removeChild(list.firstChild);
+    }
+}
+function rightOut() {
+    var listSpan = document.getElementsByTagName(&#39;div&#39;)[0];
+    if (!listSpan) {
+        alert(&#39;No Number&#39;);
+    } else {
+        list.removeChild(list.lastElementChild);
+    }   
+}
+
+var sortNum = document.getElementById(&#39;sort_num&#39;);
+sortNum.onclick=function(){
+    var eleHeight = [];
+    for (var item = 0; item &lt; innerSpan.length; item++) {
+        eleHeight.push(innerSpan[item].offsetHeight);       
+    }//把innerSpan各元素的高度另存一个数组，方便书写
+
+    var i = 0,j = 1,timer = null;
+    timer = setInterval(run,3);
+    function run() {
+        if (i &lt; eleHeight.length) {
+            if (j &lt; eleHeight.length) {
+                if (eleHeight[i] &gt; eleHeight[j]) {
+                    var temp = eleHeight[i];
+                    eleHeight[i] = eleHeight[j];
+                    eleHeight[j] = temp;
+                    innerSpan[i].style.height = eleHeight[i];
+                    innerSpan[j].style.height = temp;
+                }
+                j++;
+            } else {
+                i++;
+                j = i + 1;
+            }                       
+        } else {
+            clearInterval(timer);
+            return;
+        }
+    }//看的前端接班人的算法，尝试过改成for循环但是失败了…… 
+}
+
+//随机生成一组数
+function randomData() {
+    var data = [];
+    for (var i = 0; i &lt; 100; i++) {
+        var randomNum = Math.floor(Math.random()*100+10);
+        data.push(randomNum);
+        list.innerHTML += &#39;&lt;div&gt;&lt;/div&gt;&#39;;
+        var newSpan = list.getElementsByTagName(&#39;div&#39;);
+        newSpan[i].style.height = parseInt(randomNum) + &#39;px&#39;;
+    }
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<pre><code>for (var p in yourElement) {
+    console.log(p, &#39;=&#39;, yourElement[p]);
+}
+</code></pre>
+
+<p>todo 用jQuery写单页网页滑动的插件<br/>
+todo  xiang yin shi tu pian<br/>
+```<br/>
+&lt;img src=&quot;<a href="http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_small.jpg">http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_small.jpg</a>&quot;</p>
+
+<pre><code> srcset=&quot;
+ http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_small.jpg 640w,
+  http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_large.jpg 1920w&quot;
+ sizes=&quot;(max-width:1000px) 640px,1920px&quot;&gt;
+</code></pre>
+
+<pre><code>
+todo webstorm css url无法加载是因为要把image文件夹加到webstorm一个地方
+
+
+
+
+
+</code></pre>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-16T09:12:04+08:00" itemprop="datePublished">2017/1/16</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14845291247103.html" itemprop="url">
+		webpack</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p><img src="media/14844716821556/14844831046408.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844831379964.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844841913965.jpg" alt=""/></p>
+
+<p>1个代码文件<br/>
+<code><br/>
+entry:要放的代码<br/>
+output：目标生成的文件<br/>
+</code></p>
+
+<p>2 多个代码文件<br/>
+<img src="media/14844716821556/14844854894868.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844856758688.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844857558667.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844860422682.jpg" alt=""/><br/>
+<img src="media/14844716821556/14844863576314.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844865889410.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844867533836.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844868968532.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844874031107.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844874623586.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844878966440.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844882949702.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844885976367.jpg" alt=""/></p>
+
+<p><img src="media/14844716821556/14844889979904.jpg" alt=""/></p>
+
+<p><a href="http://www.jirengu.com/live/jrg_public">http://www.jirengu.com/live/jrg_public</a></p>
+
+<p><a href="http://www.jirengu.com/app/watch/1379/1?vsum=37">http://www.jirengu.com/app/watch/1379/1?vsum=37</a></p>
+
+<p><img src="media/14845559322210/14850738173871.jpg" alt=""/></p>
+
+<p><img src="media/14845291247103/14850784923760.jpg" alt=""/></p>
+
+<p><img src="media/14845291247103/14850792906203.jpg" alt=""/></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-15T17:14:42+08:00" itemprop="datePublished">2017/1/15</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14844716821556.html" itemprop="url">
+		absolute relative</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p><img src="media/14844716821556/14844717001904.jpg" alt=""/></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-12T20:18:05+08:00" itemprop="datePublished">2017/1/12</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14842234853932.html" itemprop="url">
+		VIM</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>配置<br/>
+<a href="https://github.com/FrankFang/workanywhere/blob/master/vimrc">https://github.com/FrankFang/workanywhere/blob/master/vimrc</a></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-01-12T14:03:07+08:00" itemprop="datePublished">2017/1/12</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14842009870686.html" itemprop="url">
+		跨域</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">跨域</h2>
+
+<h3 id="toc_1">一般ajax请求</h3>
+
+<pre><code>var xhr = new = XMLHttpRequest();
+xhr.open(&quot;get&quot;,url,true);
+</code></pre>
+
+<pre><code>xhr.send();
+</code></pre>
+
+<pre><code>xhr.onreadystastechange = function(){
+    if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+    //处理xhr.responseText
+    
+    }
+}
+</code></pre>
+
+<h3 id="toc_2">同源策略（same origin policy）</h3>
+
+<ul>
+<li>同协议：如都是http或者HTTPS</li>
+<li>同域名：如都是<a href="http://jirengu.com/a%E5%92%8Chttp://jirengu.com/b">http://jirengu.com/a和http://jirengu.com/b</a></li>
+<li>同端口：如都是80端口（默认都是80端口）</li>
+</ul>
+
+<h4 id="toc_3">same origin policy</h4>
+
+<p>1 直接加载一个源， <br/>
+ <code><br/>
+ &lt;script src=&quot;&quot; &gt;<br/>
+</code><br/>
+获取 function name(内容)</p>
+
+<ul>
+<li><p>下面有一个 function name的函数，函数内有数据处理逻辑</p></li>
+<li></li>
+</ul>
+
+<pre><code> &lt;script&gt;
+$(&#39;.change&#39;).addEventListener(&#39;click&#39;,function () {
+    var script = document.createElement(&#39;script&#39;);
+    script.src = &#39;http://a.jrg.com:8080/getNews?callback=appendHtml&#39;;
+    document.head.appendChild(script);
+})
+
+function appendHtml(news) {
+    var html = &#39;&#39;;
+    for(var i=0;i&lt;news.length;i++){
+        html += &#39;&lt;li&gt;&#39;+news[i]+&#39;&lt;/li&gt;li&gt;&#39;;
+    }
+    console.log(html);
+    $(&#39;.news&#39;).innerHTML = html;
+}
+function $(id) {
+    return document.querySelector(id);
+}
+&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>服务端</li>
+</ul>
+
+<pre><code>app.get(&#39;/getNews&#39;,function (req,res) {
+    var news = [
+        &#39;one day 0&#39;,
+        &#39;one day 1&#39;,
+        &#39;one day 2&#39;,
+        &#39;one day 3&#39;,
+        &#39;one day 4&#39;,
+        &#39;one day 5&#39;,
+        &#39;one day 6&#39;,
+        &#39;one day 7&#39;,
+        &#39;one day 8&#39;
+    ]
+    var data = [];
+    for(var i=0;i&lt;3;i++) {
+        var index = parseInt(Math.random()*news.length);
+        data.push(news[index]);
+        news.splice(index,1);
+    }
+    var cb = req.query.callback;
+    res.send(cb+&#39;(&#39;+ JSON.stringify(data)+&#39;)&#39;);
+})
+</code></pre>
+
+<h3 id="toc_4">CORS (Cross-Origin Resource Sharing)全称是跨域资源共享，IE10以上</h3>
+
+<h3 id="toc_5">降域跨域</h3>
+
+<p><img src="media/14842009870686/14842134816431.jpg" alt=""/></p>
+
+<p><img src="media/14842009870686/14844007001064.jpg" alt=""/></p>
+
+<pre><code>
+</code></pre>
+
+<p><a href="http://codeguide.bootcss.com/">http://codeguide.bootcss.com/</a></p>
+
+<p>网站<br/>
+<a href="http://fantasyui.com/oxygen/">http://fantasyui.com/oxygen/</a></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
 				<time datetime="2017-01-12T10:35:13+08:00" itemprop="datePublished">2017/1/12</time>
 			</div>
 			
@@ -132,14 +928,21 @@
 		ICON的处理</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841402027530.jpg" alt=""/></p>
+			<h2 id="toc_0">SVG</h2>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg">https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg</a></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841402027530.jpg" alt=""/></p>
+
+<p><a href="https://draeton.github.io/stitches/">https://draeton.github.io/stitches/</a></p>
 
 <p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841404661053.jpg" alt=""/><br/>
 css sprites generator</p>
 
 <p>icon font</p>
 
-<p>&amp;后面接Unicode码</p>
+<p>&amp;后面接Unicode码<br/>
+<a href="https://icomoon.io/app/#/select">https://icomoon.io/app/#/select</a></p>
 
 <p>BFC</p>
 
@@ -152,7 +955,7 @@ css sprites generator</p>
 
 <p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841436337388.jpg" alt=""/></p>
 
-<p>webpack</p>
+<p>学会webpack工程化就好</p>
 
 <p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841461464583.jpg" alt=""/></p>
 
@@ -218,7 +1021,7 @@ for(index in arr) {
 }
 </code></pre>
 
-<p>3 .number转字符串<br/>
+<p>3 .number转字符串<a href="http://www.jb51.net/article/48465.htm">http://www.jb51.net/article/48465.htm</a><br/>
 1. <br/>
 <code><br/>
 var str = number + &quot;&quot;<br/>
@@ -356,28 +1159,6 @@ https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
-				<time datetime="2017-01-09T02:08:35+08:00" itemprop="datePublished">2017/1/9</time>
-			</div>
-			
-			 
-			
-		</div>
-		<h1 class="title" itemprop="name"><a href="14838989155437.html" itemprop="url">
-		建立字母哥的网站 Heroku 的使用</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p><a href="https://github.com/nswbmw/N-blog">https://github.com/nswbmw/N-blog</a></p>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
 				<time datetime="2017-01-09T00:50:12+08:00" itemprop="datePublished">2017/1/9</time>
 			</div>
 			
@@ -414,61 +1195,6 @@ https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
-				<time datetime="2017-01-08T21:18:56+08:00" itemprop="datePublished">2017/1/8</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='blog.html'>blog</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="14838815360319.html" itemprop="url">
-		git的使用</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<h3 id="toc_0">1.成功发布</h3>
-
-<p><img src="media/14838815360319/14839023570342.jpg" alt=""/><br/>
-git </p>
-
-<ol>
-<li>git remove -v
-<img src="media/14838815360319/14838909388203.jpg" alt=""/>
-``
-<a href="http://ruby-china.org/topics/4768">http://ruby-china.org/topics/4768</a></li>
-</ol>
-
-<p>git head,git fetch的理解</p>
-
-<p>git push -u origin mster与git push origin master 的区别 ？</p>
-
-<h3 id="toc_1">2.fetch的作用</h3>
-
-<p>修改github上的代码，fetch一下，</p>
-
-<p><img src="media/14838815360319/14841028443135.jpg" alt=""/></p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/7bc9d62a6059252d8dcc7efd349b033b5ab5b924.jpg" alt="7bc9d62a6059252d8dcc7efd349b033b5ab5b924"/><br/>
-.idea是webstorm的文件<br/>
-<a href="https://www.zhihu.com/question/31963837">https://www.zhihu.com/question/31963837</a></p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/751a6159252dd42a72d26252033b5bb5c8eab824.jpg" alt="751a6159252dd42a72d26252033b5bb5c8eab824"/></p>
-
-<p><a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a><br/>
-继续nodejs</p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/1238403218_afile.jpg" alt="1238403218_afile"/></p>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
 				<time datetime="2017-01-08T21:18:38+08:00" itemprop="datePublished">2017/1/8</time>
 			</div>
 			
@@ -476,10 +1202,25 @@ git </p>
 			
 		</div>
 		<h1 class="title" itemprop="name"><a href="14838815183801.html" itemprop="url">
-		面试题</a></h1>
+		工作</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<p><img src="http://ogtnnj4ck.bkt.clouddn.com/%E4%B8%87%E9%82%91%E9%80%9A%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AF%95%E9%A2%98.jpg" alt="万邑通前端笔试题"/></p>
+			<p>找工作<br/>
+https://   <a href="http://www.zhihu.com/question/28476231">www.zhihu.com/question/28476231</a></p>
+
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/%E4%B8%87%E9%82%91%E9%80%9A%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AF%95%E9%A2%98.jpg" alt="万邑通前端笔试题"/></p>
+
+<p><img src="media/14838815183801/14849099677442.jpg" alt=""/></p>
+
+<p><img src="media/14838815183801/14849100828271.jpg" alt=""/></p>
+
+<p>方案一<br/>
+1 一个slider<br/>
+2 点击左箭头，slider左移动<br/>
+3 点击右箭头，slider右移动<br/>
+方案二</p>
+
+<p><img src="media/14838815183801/test.png" alt="test"/></p>
 
 
 			
@@ -514,41 +1255,6 @@ Markdown&#39;s syntax is intended for one purpose: to be used as a format for <e
 			 
 			<a href="14783435823003.html#more" class="more-link">Read on &rarr;</a>
     		
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2016-11-05T18:59:42+08:00" itemprop="datePublished">2016/11/5</time>
-			</div>
-			
-			 
-			
-		</div>
-		<h1 class="title" itemprop="name"><a href="14783435823004.html" itemprop="url">
-		Welcome to MWeb</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>What is MWeb? MWeb is a Pro Markdown writing, note taking and static blog generator App. MWeb used Github Flavored Markdown syntax. Please check the MWeb official website: <a href="http://www.mweb.im">http://www.mweb.im</a> introduction video, it will show you how to use MWeb. We also suggest that you check the MWeb official help document: <a href="http://www.mweb.im/help.html">http://www.mweb.im/help.html</a></p>
-
-<h2 id="toc_0">Things you should know</h2>
-
-<p>MWeb has two Mode, External Mode and Library Mode. <br/>
-In External Mode, you can edit classic text and markdown files from anywhere on your Mac. As an example, you can point MWeb to a folder on Dropbox. Library Mode design for note taking and static blog/website generator. For more info, please check the <a href="http://www.mweb.im">MWeb official website</a> introduction video and help document.</p>
-
-<h2 id="toc_1">Help us to make MWeb better!</h2>
-
-<ol>
-<li>Tell your friends about MWeb.</li>
-<li>Send a feedback: <a href="mailto:coderforart+233@gmail.com">coderforart+233@gmail.com</a></li>
-<li>Leave a review or at least a rating in Mac App Store.</li>
-</ol>
-
-
-			
 			
 		</div>
 

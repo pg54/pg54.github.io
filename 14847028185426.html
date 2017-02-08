@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	ICON的处理 - pg54
+  	JavaScript 作用域和变量提升 - pg54
   	
 	</title>
 
@@ -118,38 +118,73 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">ICON的处理</h1>
+		<h1 class="title" itemprop="name">JavaScript 作用域和变量提升</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<h2 id="toc_0">SVG</h2>
+			<p><a href="http://www.jianshu.com/p/d4bde266e06d">http://www.jianshu.com/p/d4bde266e06d</a></p>
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg">https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/svg</a></p>
+<h2 id="toc_0">Scrope</h2>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841402027530.jpg" alt=""/></p>
+<p>JavaScript中的作用域是依靠函数生成的<br/>
+* 全局作用域<br/>
+* 函数作用域</p>
 
-<p><a href="https://draeton.github.io/stitches/">https://draeton.github.io/stitches/</a></p>
+<pre><code>var i = 100;
+    function outer() {
+        console.log(i);
+        function inner() {
+            console.log(i);
+            var i  = 1;
+            console.log(i);
+        }
+        inner();
+        console.log(i);
+    }
+    outer();
+</code></pre>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841404661053.jpg" alt=""/><br/>
-css sprites generator</p>
+<h2 id="toc_1">Hoisting</h2>
 
-<p>icon font</p>
+<blockquote>
+<p>Hoisting is a term you will not find in the JavaScript docs. Hoisting was thought up as a general way of thinking about how execution context (specifically the creation and execution phases) work in JavaScript. But, hoisting can lead to misunderstandings. For example, hoisting teaches that variable and function declarations are physically moved to the top your coding, but this is not what happens at all. What does happen is the variable and function declarations are put into memory during the compile phase, but stays exactly where you typed it in your coding.<br/><br/>
+JavaScript only hoists declarations, not initializations. If you are using a variable that is declared and initialized after using it, the value will be undefined. The below two examples demonstrate the same behavior.</p>
+</blockquote>
 
-<p>&amp;后面接Unicode码<br/>
-<a href="https://icomoon.io/app/#/select">https://icomoon.io/app/#/select</a></p>
+<pre><code>var i = 1;
+var j = 9;
+console.log(i+&#39;&#39;+j);
+VM1336:3 19
+undefined
+var p = 1;
+console.log(p+&#39;&#39;+o);
+var o = 10;
+VM1509:2 1undefined
+undefined
+</code></pre>
 
-<p>BFC</p>
+<h3 id="toc_2">情景1：重复声明</h3>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422407480.jpg" alt=""/></p>
+<pre><code>var a = 10;
+    console.log(a);
+    if (true) {
+        var a = 20;
+        console.log(a);  //20
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841422838818.jpg" alt=""/></p>
+    }
+    console.log(a);  //20
+</code></pre>
 
-<p>NPM SVG SPRITES<br/>
-<img src="http://ogtnnj4ck.bkt.clouddn.com/14841433266751.jpg" alt=""/></p>
+<h3 id="toc_3">情景4: 函数与函数重复声明</h3>
 
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841436337388.jpg" alt=""/></p>
+<pre><code>console.log(foo);
+    function foo(n) {
+        return n + 2;
+        
+    }
+    function foo() {
+        return n + 1;
+    }
 
-<p>学会webpack工程化就好</p>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14841461464583.jpg" alt=""/></p>
+</code></pre>
 
 		</div>
 	</article>
