@@ -4,7 +4,7 @@
   <title><![CDATA[pg54]]></title>
   <link href="https://pg54.github.io/atom.xml" rel="self"/>
   <link href="https://pg54.github.io/"/>
-  <updated>2017-02-08T09:40:19+08:00</updated>
+  <updated>2017-02-10T00:05:35+08:00</updated>
   <id>https://pg54.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -53,20 +53,22 @@ div Text：显示加载的文本内容，不解析</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[CSS]]></title>
+    <title type="html"><![CDATA[]]></title>
     <link href="https://pg54.github.io/14864773519870.html"/>
     <updated>2017-02-07T22:22:31+08:00</updated>
     <id>https://pg54.github.io/14864773519870.html</id>
     <content type="html"><![CDATA[
-<h2 id="toc_0">布局</h2>
+<h1 id="toc_0">CSS</h1>
 
-<h3 id="toc_1">左边定宽，右边自适应</h3>
+<h2 id="toc_1">布局</h2>
+
+<h3 id="toc_2">左边定宽，右边自适应</h3>
 
 <p><strong>Method1:</strong><br/>
-<img src="media/14864773519870/14864805222384.jpg" alt=""/><br/>
-<img src="media/14864773519870/14864806387997.jpg" alt=""/></p>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/14864805222384.jpg" alt=""/><br/>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/14864806387997.jpg" alt=""/></p>
 
-<p><img src="media/14864773519870/14864808340819.jpg" alt=""/><br/>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864808340819.jpg" alt=""/><br/>
 更好的方式</p>
 
 <pre><code>&lt;div class=&quot;parent&quot;&gt;
@@ -158,20 +160,20 @@ div Text：显示加载的文本内容，不解析</p>
 
 <p>想想其它方案（有五六种）</p>
 
-<h3 id="toc_2">不定宽，自适应</h3>
+<h3 id="toc_3">不定宽，自适应</h3>
 
-<p><img src="media/14864773519870/14864809402038.jpg" alt=""/><br/>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864809402038.jpg" alt=""/><br/>
 （三种方案）</p>
 
-<h3 id="toc_3">四等分</h3>
+<h3 id="toc_4">四等分</h3>
 
-<p><img src="media/14864773519870/14864812337854.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864812337854.jpg" alt=""/></p>
 
-<h3 id="toc_4">等高</h3>
+<h3 id="toc_5">等高</h3>
 
-<p><img src="media/14864773519870/14864829931598.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864829931598.jpg" alt=""/></p>
 
-<h3 id="toc_5">水平居中</h3>
+<h3 id="toc_6">水平居中</h3>
 
 <p><strong>Method1:</strong><br/>
 方案：inline-blocl和text-align<br/>
@@ -256,9 +258,9 @@ transform是CSS3属性，不支持IE6，7，8</p>
 兼容性：<br/>
 优缺点：</p>
 
-<p><img src="media/14864773519870/14864835600576.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864835600576.jpg" alt=""/></p>
 
-<h3 id="toc_6">垂直居中 parent,child高度都不固定</h3>
+<h3 id="toc_7">垂直居中 parent,child高度都不固定</h3>
 
 <p><strong>Method1:</strong><br/>
 方案：<br/>
@@ -293,7 +295,7 @@ transform是CSS3属性，不支持IE6，7，8</p>
 <p>兼容性：<br/>
 优缺点：</p>
 
-<h3 id="toc_7">垂直、水平同时居中</h3>
+<h3 id="toc_8">垂直、水平同时居中</h3>
 
 <p><strong>Method1:</strong><br/>
 方案：<br/>
@@ -331,20 +333,20 @@ transform是CSS3属性，不支持IE6，7，8</p>
 <p>兼容性：<br/>
 优缺点：只支持高版本浏览器</p>
 
-<h3 id="toc_8">后台管理系统布局</h3>
+<h3 id="toc_9">后台管理系统布局</h3>
 
-<p><img src="media/14864773519870/14864838126090.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864838126090.jpg" alt=""/></p>
 
-<p><img src="media/14864773519870/14864838959856.jpg" alt=""/><br/>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14864838959856.jpg" alt=""/><br/>
 <mark>&lt;!----&gt;</mark></p>
 
-<h2 id="toc_9">页面各个层级宽度的设置</h2>
+<h2 id="toc_10">页面各个层级宽度的设置</h2>
 
-<h2 id="toc_10">响应式情况下图片的设置</h2>
+<h2 id="toc_11">响应式情况下图片的设置</h2>
 
-<h2 id="toc_11">CSS文档流(fixed,absolute,relative)，float,floxbox</h2>
+<h2 id="toc_12">CSS文档流(fixed,absolute,relative)，float,floxbox</h2>
 
-<h2 id="toc_12">float情况下清除浮动</h2>
+<h2 id="toc_13">float情况下清除浮动</h2>
 
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -406,7 +408,7 @@ transform是CSS3属性，不支持IE6，7，8</p>
 &lt;/html&gt;
 </code></pre>
 
-<h2 id="toc_13">div文字居中</h2>
+<h2 id="toc_14">div文字居中</h2>
 
 <pre><code>div{
     width:200px;height:200px;  /*设置div的大小*/
@@ -417,18 +419,18 @@ transform是CSS3属性，不支持IE6，7，8</p>
 }
 </code></pre>
 
-<h2 id="toc_14">IE的适配</h2>
+<h2 id="toc_15">IE的适配</h2>
 
-<h2 id="toc_15">margin-left</h2>
+<h2 id="toc_16">margin-left</h2>
 
 <p>The margin-left CSS property sets the margin space required on the left side of a box associated with an element. A negative value is also allowed.</p>
 
-<h2 id="toc_16">left</h2>
+<h2 id="toc_17">left</h2>
 
 <p>The left CSS property specifies part of the position of positioned elements.<br/>
 For absolutely positioned elements (those with position: absolute or position: fixed), it specifies the distance between the left margin edge of the element and the left edge of its containing block.</p>
 
-<h2 id="toc_17">边距合并</h2>
+<h2 id="toc_18">边距合并</h2>
 
 <p><a href="http://www.cnblogs.com/avafan/p/margin.html">http://www.cnblogs.com/avafan/p/margin.html</a></p>
 
@@ -502,26 +504,9 @@ For absolutely positioned elements (those with position: absolute or position: f
 &lt;/html&gt;
 </code></pre>
 
-<h2 id="toc_18">z-index</h2>
+<h2 id="toc_19">z-index</h2>
 
 <p><a href="http://www.cnblogs.com/dolphinX/p/3262469.html">http://www.cnblogs.com/dolphinX/p/3262469.html</a></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[]]></title>
-    <link href="https://pg54.github.io/14863676717828.html"/>
-    <updated>2017-02-06T15:54:31+08:00</updated>
-    <id>https://pg54.github.io/14863676717828.html</id>
-    <content type="html"><![CDATA[
-<p>127.0.0.1 a.jrg.com<br/>
-127.0.0.1 b.jrg.com<br/>
-127.0.0.1 jrg.com<br/>
-192.30.253.112 github.com<br/>
-151.101.88.249 github.global.ssl.fastly.net</p>
-
-<p><img src="media/14863676717828/14863682732916.jpg" alt=""/></p>
 
 ]]></content>
   </entry>
@@ -534,7 +519,7 @@ For absolutely positioned elements (those with position: absolute or position: f
     <content type="html"><![CDATA[
 <h3 id="toc_0">template</h3>
 
-<p><img src="media/14863596093783/14863596325581.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14863596325581.jpg" alt=""/></p>
 
 ]]></content>
   </entry>
@@ -753,220 +738,16 @@ undefined
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Catch]]></title>
-    <link href="https://pg54.github.io/14845559322210.html"/>
-    <updated>2017-01-16T16:38:52+08:00</updated>
-    <id>https://pg54.github.io/14845559322210.html</id>
-    <content type="html"><![CDATA[
-<p><a href="https://www.baidu.com/s?ie=UTF-8&amp;wd=html%20float%20left%20right%20%E9%AB%98%E5%BA%A6">https://www.baidu.com/s?ie=UTF-8&amp;wd=html%20float%20left%20right%20%E9%AB%98%E5%BA%A6</a></p>
-
-<h2 id="toc_0">ps</h2>
-
-<p><a href="http://www.maiziedu.com/course/231-2019/">http://www.maiziedu.com/course/231-2019/</a><br/>
-<img src="media/14845559322210/14846298863005.jpg" alt=""/><br/>
-调出属性面板 F8<br/>
-t 可以查看文字<br/>
-m 方框可以查看距离</p>
-
-<p><img src="media/14845559322210/14847104149276.jpg" alt=""/></p>
-
-<p>按 c 选择切边工具</p>
-
-<p>自动切片<br/>
-<img src="media/14845559322210/14847196706120.jpg" alt=""/></p>
-
-<p><img src="media/14845559322210/14847197184714.jpg" alt=""/></p>
-
-<p><img src="media/14845559322210/14847197694059.jpg" alt=""/></p>
-
-<p><img src="media/14845559322210/14847198297738.jpg" alt=""/></p>
-
-<p>qq浏览器允许弹窗<br/>
-<img src="media/14845559322210/14846339121432.jpg" alt=""/></p>
-
-<pre><code>&lt;!DOCTYPE&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;task_2-18&lt;/title&gt;
-    &lt;style&gt;
-    * {
-        padding: 0;
-        margin: 0;
-    }
-    #ctrl {
-        margin: 5px 0 20px;
-    }
-    #ctrl button {
-        padding: 3px;
-    }
-    #list {
-        display: flex;
-        align-items: flex-end;
-    }
-    #list div {
-        width: 20px;
-        margin: 0 2px;
-        background-color: red;
-        color: white;
-        line-height: 15px;
-        cursor: pointer;
-        bottom: 0;
-    }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;ctrl&quot;&gt;
-    &lt;input type=&quot;text&quot; id=&quot;inputNum&quot;&gt;
-    &lt;button id=&quot;left_in&quot;&gt;左侧入&lt;/button&gt;
-    &lt;button id=&quot;right_in&quot;&gt;右侧入&lt;/button&gt;
-    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-    &lt;button id=&quot;left_out&quot;&gt;左侧出&lt;/button&gt;
-    &lt;button id=&quot;right_out&quot;&gt;右侧出&lt;/button&gt;
-    &lt;button id=&quot;sort_num&quot;&gt;排序&lt;/button&gt;
-    &lt;button id=&quot;randomBtn&quot;&gt;生成随机数&lt;/button&gt;
-&lt;/div&gt;
-&lt;div id=&quot;list&quot;&gt;
-&lt;/div&gt;
-&lt;script&gt;
-window.onload = function () {
-    document.getElementById(&#39;left_in&#39;).onclick = leftIn;
-    document.getElementById(&#39;right_in&#39;).onclick = rightIn;
-    document.getElementById(&#39;left_out&#39;).onclick = leftOut;
-    document.getElementById(&#39;right_out&#39;).onclick = rightOut;
-    document.getElementById(&#39;randomBtn&#39;).onclick = randomData;
-}
-var list = document.getElementById(&#39;list&#39;);
-var numTest = /^\d{2,3}$/;//限制输入的数字在10-100
-var innerSpan = list.getElementsByTagName(&#39;div&#39;);
-function leftIn() {
-    var num = document.getElementById(&#39;inputNum&#39;).value;
-    var newSpan = document.createElement(&#39;div&#39;);
-    newSpan.style.height = parseInt(num) + &#39;px&#39;;
-    if(num &gt; 100||!numTest.test(num)) {
-        alert(&#39;Number is Wrong&#39;);
-    }else if (innerSpan.length &gt; 60) {
-        alert(&#39;队列数量超出60&#39;)
-    }//队列元素数量最多限制为60个，当超过60个时，添加元素时alert出提示
-    else if(!innerSpan[0]) {
-        list.appendChild(newSpan);
-    } else {
-        list.insertBefore(newSpan,innerSpan[0])
-    }
-}
-function rightIn() {
-    var num = document.getElementById(&#39;inputNum&#39;).value;
-    var newSpan = document.createElement(&#39;div&#39;);
-    newSpan.style.height = parseInt(num) + &#39;px&#39;;
-    if (!numTest.test(num)) {
-        alert(&#39;Number is Wrong&#39;);
-    } else {
-        list.appendChild(newSpan);
-    }   
-}
-function leftOut() {
-    var listSpan = document.getElementsByTagName(&#39;div&#39;)[0];
-    if (!listSpan) {
-        alert(&#39;No Number&#39;);
-    } else {
-        list.removeChild(list.firstChild);
-    }
-}
-function rightOut() {
-    var listSpan = document.getElementsByTagName(&#39;div&#39;)[0];
-    if (!listSpan) {
-        alert(&#39;No Number&#39;);
-    } else {
-        list.removeChild(list.lastElementChild);
-    }   
-}
-
-var sortNum = document.getElementById(&#39;sort_num&#39;);
-sortNum.onclick=function(){
-    var eleHeight = [];
-    for (var item = 0; item &lt; innerSpan.length; item++) {
-        eleHeight.push(innerSpan[item].offsetHeight);       
-    }//把innerSpan各元素的高度另存一个数组，方便书写
-
-    var i = 0,j = 1,timer = null;
-    timer = setInterval(run,3);
-    function run() {
-        if (i &lt; eleHeight.length) {
-            if (j &lt; eleHeight.length) {
-                if (eleHeight[i] &gt; eleHeight[j]) {
-                    var temp = eleHeight[i];
-                    eleHeight[i] = eleHeight[j];
-                    eleHeight[j] = temp;
-                    innerSpan[i].style.height = eleHeight[i];
-                    innerSpan[j].style.height = temp;
-                }
-                j++;
-            } else {
-                i++;
-                j = i + 1;
-            }                       
-        } else {
-            clearInterval(timer);
-            return;
-        }
-    }//看的前端接班人的算法，尝试过改成for循环但是失败了…… 
-}
-
-//随机生成一组数
-function randomData() {
-    var data = [];
-    for (var i = 0; i &lt; 100; i++) {
-        var randomNum = Math.floor(Math.random()*100+10);
-        data.push(randomNum);
-        list.innerHTML += &#39;&lt;div&gt;&lt;/div&gt;&#39;;
-        var newSpan = list.getElementsByTagName(&#39;div&#39;);
-        newSpan[i].style.height = parseInt(randomNum) + &#39;px&#39;;
-    }
-}
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<pre><code>for (var p in yourElement) {
-    console.log(p, &#39;=&#39;, yourElement[p]);
-}
-</code></pre>
-
-<p>todo 用jQuery写单页网页滑动的插件<br/>
-todo  xiang yin shi tu pian<br/>
-```<br/>
-&lt;img src=&quot;<a href="http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_small.jpg">http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_small.jpg</a>&quot;</p>
-
-<pre><code> srcset=&quot;
- http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_small.jpg 640w,
-  http://7xo5hi.com1.z0.glb.clouddn.com/0704onePlus_activity_large.jpg 1920w&quot;
- sizes=&quot;(max-width:1000px) 640px,1920px&quot;&gt;
-</code></pre>
-
-<pre><code>
-todo webstorm css url无法加载是因为要把image文件夹加到webstorm一个地方
-
-
-
-
-
-</code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[webpack]]></title>
     <link href="https://pg54.github.io/14845291247103.html"/>
     <updated>2017-01-16T09:12:04+08:00</updated>
     <id>https://pg54.github.io/14845291247103.html</id>
     <content type="html"><![CDATA[
-<p><img src="media/14844716821556/14844831046408.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844831046408.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844831379964.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844831379964.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844841913965.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844841913965.jpg" alt=""/></p>
 
 <p>1个代码文件<br/>
 <code><br/>
@@ -975,42 +756,42 @@ output：目标生成的文件<br/>
 </code></p>
 
 <p>2 多个代码文件<br/>
-<img src="media/14844716821556/14844854894868.jpg" alt=""/></p>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/14844854894868.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844856758688.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844856758688.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844857558667.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844857558667.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844860422682.jpg" alt=""/><br/>
-<img src="media/14844716821556/14844863576314.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844860422682.jpg" alt=""/><br/>
+<img src="http://ogtnnj4ck.bkt.clouddn.com/14844863576314.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844865889410.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844865889410.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844867533836.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844867533836.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844868968532.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844868968532.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844874031107.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844874031107.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844874623586.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844874623586.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844878966440.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844878966440.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844882949702.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844882949702.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844885976367.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844885976367.jpg" alt=""/></p>
 
-<p><img src="media/14844716821556/14844889979904.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14844889979904.jpg" alt=""/></p>
 
 <p><a href="http://www.jirengu.com/live/jrg_public">http://www.jirengu.com/live/jrg_public</a></p>
 
 <p><a href="http://www.jirengu.com/app/watch/1379/1?vsum=37">http://www.jirengu.com/app/watch/1379/1?vsum=37</a></p>
 
-<p><img src="media/14845559322210/14850738173871.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14850738173871.jpg" alt=""/></p>
 
-<p><img src="media/14845291247103/14850784923760.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14850784923760.jpg" alt=""/></p>
 
-<p><img src="media/14845291247103/14850792906203.jpg" alt=""/></p>
+<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14850792906203.jpg" alt=""/></p>
 
 ]]></content>
   </entry>
@@ -1022,18 +803,6 @@ output：目标生成的文件<br/>
     <id>https://pg54.github.io/14844716821556.html</id>
     <content type="html"><![CDATA[
 <p><img src="media/14844716821556/14844717001904.jpg" alt=""/></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[VIM]]></title>
-    <link href="https://pg54.github.io/14842234853932.html"/>
-    <updated>2017-01-12T20:18:05+08:00</updated>
-    <id>https://pg54.github.io/14842234853932.html</id>
-    <content type="html"><![CDATA[
-<p>配置<br/>
-<a href="https://github.com/FrankFang/workanywhere/blob/master/vimrc">https://github.com/FrankFang/workanywhere/blob/master/vimrc</a></p>
 
 ]]></content>
   </entry>
@@ -1344,6 +1113,31 @@ https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
 <h1 id="toc_0">一起学nodejs</h1>
 
 <p><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb">https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[electron项目]]></title>
+    <link href="https://pg54.github.io/14838942123284.html"/>
+    <updated>2017-01-09T00:50:12+08:00</updated>
+    <id>https://pg54.github.io/14838942123284.html</id>
+    <content type="html"><![CDATA[
+<p>京东地址<a href="https://item.jd.com/10929693753.html">https://item.jd.com/10929693753.html</a></p>
+
+<p>大批量图片下载<a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a></p>
+
+<h2 id="toc_0">request 请求到的数据为乱码，求解决</h2>
+
+<p><a href="https://cnodejs.org/topic/545de1e1a68535a174fe51b5">https://cnodejs.org/topic/545de1e1a68535a174fe51b5</a></p>
+
+<h2 id="toc_1">Nodejs大批量下载图片入坑指南(使用async和bagpipe处理大并发量请求)</h2>
+
+<p><a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a></p>
+
+<h2 id="toc_2">七牛云js注入</h2>
+
+<p><img src="media/14838942123284/14841883960285.jpg" alt=""/></p>
 
 ]]></content>
   </entry>
