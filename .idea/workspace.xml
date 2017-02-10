@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/person.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="8" selection-end-line="17" selection-end-column="64" />
+              <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -300,12 +300,12 @@
       <workItem from="1483887189866" duration="2884000" />
       <workItem from="1484294868785" duration="139000" />
       <workItem from="1486709625599" duration="429000" />
-      <workItem from="1486710242935" duration="2087000" />
+      <workItem from="1486710242935" duration="2309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5539000" />
+    <option name="totallyTimeSpent" value="5761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="154" y="29" width="1057" height="767" extended-state="0" />
@@ -457,22 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -489,10 +473,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/archives.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2985">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/person.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="8" selection-end-line="17" selection-end-column="64" />
+          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
           <folding />
         </state>
       </provider>
