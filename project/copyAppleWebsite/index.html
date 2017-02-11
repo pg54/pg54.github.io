@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="../../asset/javascripts/jquery.min.js"></script>
+</head>
+<body>
+<div class="header"></div>
+<div class="header_content">
+    <div class="logo_container">
+        <img src="./images/logo.png" class="logo_image">
+    </div>
+    <ul class="navigation_bar">
+        <li class="navigation_item">Mac</li>
+        <li class="navigation_item">iPad</li>
+        <li class="navigation_item">iPhone</li>
+        <li class="navigation_item">Watch</li>
+        <li class="navigation_item">Tv</li>
+        <li class="navigation_item">Music</li>
+        <li class="navigation_item">Support</li>
+    </ul>
+    <div class="search_bar">
+        <form action="">
+            <span class="search_image"></span>
+            <input type="search" class="search_long">
+            <span class="search_close">x</span>
+        </form>
+    </div>
+    <div class="search_contaioner">
+        <span class="search_image"></span>
+        <span class="bag_image"></span>
+    </div>
+</div>
+<div class="carousel">
+    <ul class="img-ct">
+        <li data-index=0>
+            <a href=""><img src="http://7xo5hi.com1.z0.glb.clouddn.com/iphone_alt_large_2x.jpg"></a>
+        </li>
+        <li data-index=1>
+            <a href=""><img src="http://7xo5hi.com1.z0.glb.clouddn.com/watch_alt_large_2x.jpg"></a>
+        </li>
+        <li data-index=2>
+            <a href=""><img src="http://7xo5hi.com1.z0.glb.clouddn.com/macbookpro_large_2x.jpg"></a>
+        </li>
+    </ul>
+    <a class="btn btn-pre" href="#">&lt;</a>
+    <a class="btn btn-next" href="#">&gt;</a>
+    <div class="bullet-ct">
+        <ul class="bullet">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div class="column_container">
+        <div class="footer_column">
+            <p class="column_title">
+                Shop and learn
+            </p>
+            <a href="" class="footer-item">Mac</a>
+            <a href="" class="footer-item">iPad</a>
+            <a href="" class="footer-item">iPhone</a>
+            <a href="" class="footer-item">Watch</a>
+            <a href="" class="footer-item">TV</a>
+            <a href="" class="footer-item">iTunes</a>
+            <a href="" class="footer-item">Accessories</a>
+            <a href="" class="footer-item">Gift Cards</a>
+            <a href="" class="footer-item"></a>
+        </div>
+
+        <div class="footer_column">
+            <p class="column_title">
+                Apple Store
+            </p>
+            <a href="" class="footer-item">Find a Store</a>
+            <a href="" class="footer-item">Genius Bar</a>
+            <a href="" class="footer-item">Workshops and Learning</a>
+            <a href="" class="footer-item">Youth Programs</a>
+            <a href="" class="footer-item">Apple Store App</a>
+            <a href="" class="footer-item">Refurbished and Clearance</a>
+            <a href="" class="footer-item">Financing</a>
+            <a href="" class="footer-item">Reuse and Recycling</a>
+            <a href="" class="footer-item">Shopping Help</a>
+        </div>
+
+        <div class="footer_column">
+            <p class="column_title">
+                For Education
+            </p>
+            <a href="" class="footer-item">Apple and Education</a>
+            <a href="" class="footer-item">Shop for College</a>
+            <p class="column_title">
+                For Education
+            </p>
+            <a href="" class="footer-item">Apple and Business</a>
+            <a href="" class="footer-item">Shop for Business</a>
+        </div>
+
+        <div class="footer_column">
+            <p class="column_title">
+                Account
+            </p>
+            <a href="" class="footer-item">Manage Your Apple ID</a>
+            <a href="" class="footer-item">Apple Store Account</a>
+            <a href="" class="footer-item">iCloud.com</a>
+
+
+            <p class="column_title">
+                Apple Values
+            </p>
+            <a href="" class="footer-item">Accessibility</a>
+            <a href="" class="footer-item">Education</a>
+            <a href="" class="footer-item">Environment</a>
+            <a href="" class="footer-item">Inclusion and Diversity</a>
+            <a href="" class="footer-item">Supplier Responsibility</a>
+            <a href="" class="footer-item">About Apple</a>
+        </div>
+
+        <div class="footer_column">
+            <p class="column_title">
+                Apple Info
+            </p>
+            <a href="" class="footer-item">Newsroom</a>
+            <a href="" class="footer-item">Job Opportunities</a>
+            <a href="" class="footer-item">Press Info</a>
+            <a href="" class="footer-item">Investors</a>
+            <a href="" class="footer-item">Events</a>
+            <a href="" class="footer-item">iTunes</a>
+            <a href="" class="footer-item">Contact Apple</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+    //    轮播组件
+    (function () {
+
+        var length = $('.img-ct').children().find('li').first().width() + 'px';
+
+        function Carousel($ct) {
+            this.$ct = $ct;
+            this.init();
+            this.bind();
+        }
+        Carousel.prototype.init = function () {
+            var $imgCt = this.$imgCt = this.$ct.find('.img-ct'),
+                    $preBtn = this.$preBtn = this.$ct.find('.btn-pre'),
+                    $nextBtn = this.$nextBtn = this.$ct.find('.btn-next'),
+                    $bullet = this.$bullet = this.$ct.find('.bullet');
+
+            var $firstImg = $imgCt.find('li').first(),
+                    $lastImg = $imgCt.find('li').last();
+
+            this.curPageIndex = 0;
+            this.imgLength = $imgCt.children().length;
+            this.isAnimate = false;
+
+            $imgCt.prepend($lastImg.clone())
+            $imgCt.append($firstImg.clone())
+
+            $imgCt.width($firstImg.width() * $imgCt.children().length)
+            $imgCt.css({
+                'left': '-'+length
+            })
+        }
+        Carousel.prototype.bind = function () {
+            var _this = this;
+            this.$preBtn.on('click', function (e) {
+                e.preventDefault();
+                _this.playPre();
+            })
+
+            this.$nextBtn.on('click', function (e) {
+                e.preventDefault();
+                _this.playNext();
+            })
+        }
+        Carousel.prototype.playPre = function () {
+            var _this = this;
+            if (this.isAnimate) return;
+            this.isAnimate = true;
+            this.$imgCt.animate({
+                left: '+='+length
+            }, function () {
+                _this.curPageIndex--;
+                if (_this.curPageIndex < 0) {
+                    _this.$imgCt.css('left', -(_this.imgLength * $firstImg.width()));
+                    _this.curPageIndex = _this.imgLength - 1
+                }
+            })
+            this.isAnimate = false;
+            this.setBullet()
+        }
+        Carousel.prototype.playNext = function () {
+            var _this = this;
+            if (this.isAnimate) return;
+            this.isAnimate = true;
+            this.$imgCt.animate({
+                left: '-='+length
+            }, function () {
+                _this.curPageIndex++;
+                if (_this.curPageIndex === _this.imgLength) {
+                    _this.$imgCt.css({
+                        'left': '-'+length
+                    })
+                    _this.curPageIndex = 0
+                }
+            })
+            _this.isAnimate = false;
+            _this.setBullet();
+        }
+        Carousel.prototype.setBullet = function () {
+            this.$bullet.children()
+                    .removeClass('active')
+                    .eq(this.curPageIndex)
+                    .addClass('active')
+        }
+
+        $('.carousel').each(function () {
+            new Carousel($(this));
+        })
+    })()
+
+
+    var searchClose = $('.search_close');
+    var searchBtn = $('.search_contaioner .search_image');
+    var searchBar = $('.search_bar');
+    var searchContainer = $('.search_contaioner');
+    var navbar = $('.navigation_bar');
+    $(function () {
+        searchBtn.on('click', function () {
+            navbar.css('display', 'none');
+            searchContainer.css('display', 'none');
+            searchBar.css('display', 'flex')
+        })
+        searchClose.on('click', function () {
+            navbar.css('display', 'flex');
+            searchContainer.css('display', 'flex');
+            searchBar.css('display', 'none')
+
+        })
+    })
+
+
+</script>
+</html>
