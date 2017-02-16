@@ -55,6 +55,14 @@
         </ul>
     </div>
 </div>
+<div class="promos">
+    <ul>
+        <li><a href=""><img src="./images/accessories_large_2x.jpg" alt=""></a></li>
+        <li><a href=""><img src="./images/ipad_pro_large_2x.jpg" alt=""></a></li>
+        <li><a href=""><img src="./images/airpods_large_2x.jpg" alt=""></a></li>
+        <li><a href=""><img src="./images/tv_large_2x.jpg" alt=""></a></li>
+    </ul>
+</div>
 <div class="footer">
     <div class="column_container">
         <div class="footer_column">
@@ -133,6 +141,24 @@
             <a href="" class="footer-item">Contact Apple</a>
         </div>
     </div>
+    <div class="footer-bottom">
+        <p class="customer-service">
+            More ways to shop: Visit an <a href="">Apple Store</a>, call 1-800-MY-APPLE, or <a href="">find a reseller.</a>
+        </p>
+        <div class="copyright">
+            <div class="nation-mark">
+                <img src="./images/16.png" alt=""><span><a href="">United States</a></span>
+            </div>
+            <p class="copyright-content">Copyright © 2017 Apple Inc. All rights reserved.</p>
+            <ul>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Sales and Refunds</a></li>
+                <li><a href="">Legal Site Map</a></li>
+            </ul>
+        </div>
+
+    </div>
 </div>
 
 
@@ -141,14 +167,13 @@
     //    轮播组件
     (function () {
 
-        var length = $('.img-ct').children().find('li').first().width() + 'px';
-
         function Carousel($ct) {
             this.$ct = $ct;
             this.init();
             this.bind();
         }
-        Carousel.prototype.init = function () {
+
+        Carousel.prototype.init = function() {
             var $imgCt = this.$imgCt = this.$ct.find('.img-ct'),
                     $preBtn = this.$preBtn = this.$ct.find('.btn-pre'),
                     $nextBtn = this.$nextBtn = this.$ct.find('.btn-next'),
@@ -160,54 +185,67 @@
             this.curPageIndex = 0;
             this.imgLength = $imgCt.children().length;
             this.isAnimate = false;
+            this.imgWidth = $firstImg.width();
+            this.autoShow = true;
+
+            //自动滚动
+            if (this.autoShow) {
+                setInterval(function () {
+                    $nextBtn.click();
+
+                },3500)
+            }
 
             $imgCt.prepend($lastImg.clone())
             $imgCt.append($firstImg.clone())
 
-            $imgCt.width($firstImg.width() * $imgCt.children().length)
+            $imgCt.width($firstImg.width() * this.$imgCt.children().length)
             $imgCt.css({
-                'left': '-'+length
+                'left': '-'+$firstImg.width()
             })
         }
-        Carousel.prototype.bind = function () {
+        Carousel.prototype.bind = function() {
             var _this = this;
-            this.$preBtn.on('click', function (e) {
+            this.$preBtn.on('click', function(e) {
                 e.preventDefault();
                 _this.playPre();
             })
 
-            this.$nextBtn.on('click', function (e) {
+            this.$nextBtn.on('click', function(e) {
                 e.preventDefault();
                 _this.playNext();
             })
         }
-        Carousel.prototype.playPre = function () {
+        Carousel.prototype.playPre = function() {
             var _this = this;
             if (this.isAnimate) return;
             this.isAnimate = true;
             this.$imgCt.animate({
-                left: '+='+length
-            }, function () {
+                left: '+='+_this.imgWidth
+            }, function() {
                 _this.curPageIndex--;
                 if (_this.curPageIndex < 0) {
-                    _this.$imgCt.css('left', -(_this.imgLength * $firstImg.width()));
+                    _this.$imgCt.css('left', -(_this.imgLength * _this.imgWidth));
                     _this.curPageIndex = _this.imgLength - 1
+                    console.log('上一个'+ _this.curPageIndex);
                 }
             })
             this.isAnimate = false;
             this.setBullet()
         }
-        Carousel.prototype.playNext = function () {
+        Carousel.prototype.playNext = function() {
             var _this = this;
             if (this.isAnimate) return;
             this.isAnimate = true;
             this.$imgCt.animate({
-                left: '-='+length
-            }, function () {
+                left: '-='+_this.imgWidth
+            }, function() {
                 _this.curPageIndex++;
+                console.log('_this.curPageIndex 1:'+_this.curPageIndex);
                 if (_this.curPageIndex === _this.imgLength) {
+                    console.log('_this.imgWidth:'+_this.imgWidth)
                     _this.$imgCt.css({
-                        'left': '-'+length
+                        'left': '-'+_this.imgWidth
                     })
                     _this.curPageIndex = 0
                 }
@@ -215,7 +253,9 @@
             _this.isAnimate = false;
             _this.setBullet();
         }
-        Carousel.prototype.setBullet = function () {
+        Carousel.prototype.setBullet = function() {
+            var _this = this;
+            console.log('_this.curPageIndex 2:'+_this.curPageIndex)
             this.$bullet.children()
                     .removeClass('active')
                     .eq(this.curPageIndex)
@@ -223,11 +263,11 @@
         }
 
         $('.carousel').each(function () {
-            new Carousel($(this));
+            new  Carousel($(this));
         })
     })()
 
-
+//搜索框
     var searchClose = $('.search_close');
     var searchBtn = $('.search_contaioner .search_image');
     var searchBar = $('.search_bar');
