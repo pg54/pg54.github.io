@@ -1,0 +1,386 @@
+/*   样式重置*/
+body,ul,ol,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+img {
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+/*   样式重置------------------------------------------------end*/
+#wisdom-contaioner {
+    width: 1280px;
+    border: 3px solid blue;
+}
+.skew-16 {
+    -webkit-transform: skew(-16deg,0);
+    -moz-transform: skew(-16deg,0);
+    -ms-transform: skew(-16deg,0);
+    -o-transform: skew(-16deg,0);
+    transform: skew(-16deg,0);
+}
+/*   wisdom-top*/
+#wisdom-top {
+    width: 100%;
+    height: 40px;
+    background: black;
+    opacity: .2;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.stock {
+    line-height: 40px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.action {
+    position: absolute;
+    top: 0;
+    right: 176px;
+}
+.action li {
+    float: left;
+    line-height: 40px;
+}
+
+/*   wisdom-top------------------------------------------------end*/
+
+/*   wisdom-nav*/
+#wisdom-nav {
+    position: absolute;
+    top: 40px;
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+}
+.logo {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    margin-left: -16px;
+    background: #FFFFFF;
+}
+.logo a {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 200px;
+
+}
+.navbar {
+    position: absolute;
+    width: 856px;
+    height: 40px;
+    left: 424px;
+    top: 10px;
+    background-color: #D51D29;
+}
+.navbar li {
+    float: left;
+    padding: 0 16px;
+    line-height: 40px;
+}
+
+.levelOne li {
+    border-top: 1px solid #333333;
+}
+.levelOne li a{
+    color: #FFFFFF;
+}
+
+.clearfix:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.levelTwo {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 800px;
+    height: 40px;
+    display: none;
+
+}
+.levelTwo li {
+    float: left;
+    background: #333333;
+}
+
+/*   wisdom-nav------------------------------------------------end*/
+
+
+/*   wisdom-slider*/
+#wisdom-slider {
+    width: 100vw;
+    height: 520px;
+}
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel .img-ct {
+    position: absolute;
+    width: 300vw;
+    height: 100%;
+}
+
+.carousel .img-ct:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.carousel .img-ct>li {
+    float: left;
+}
+
+.carousel .img-ct img {
+    width: 100vw;
+    height: 100%;
+}
+
+.carousel .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    display: block;
+}
+
+.carousel .btn-pre {
+    left: 10px;
+}
+
+.carousel .btn-next {
+    right: 10px;
+}
+
+.carousel .bullet-ct {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.carousel .bullet {
+    display: inline-block;
+}
+
+.carousel .bullet:after {
+
+}
+
+.carousel .bullet>li {
+    display: inline-block;
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 0 5px;
+}
+
+.carousel .bullet .active {
+    background-color: #666;
+}
+
+/*   wisdom-slider------------------------------------------------end*/
+
+/*   wisdom-join*/
+#wisdom-join {
+    width: 100%;
+    height: 96px;
+    background-color: #333333;
+}
+#wisdom-join span {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 16px;
+    font-style: italic;
+    line-height: 96px;
+}
+#wisdom-join li {
+    float: left;
+}
+/*   wisdom-join------------------------------------------------end*/
+
+/*   wisdom-activities*/
+#wisdom-activities {
+    width: 100%;
+    height: 200px;
+    /*padding: 40px auto;*/
+    background: #CCCCCC;
+    border-top: #D51D29 4px solid;
+}
+.activitiesWrap {
+    width: 1000px;
+    height: 120px;
+    margin: 40px auto;
+}
+.activitiesWrap li {
+    float: left;
+    margin-right: 2px;
+}
+.activitiesWrap img {
+    width: 230px;
+    height: 120px;
+}
+
+/*   wisdom-activities------------------------------------------------end*/
+/*   wisdom-sites*/
+#wisdom-sites {
+    width: 100%;
+    height: 154px;
+}
+#wisdom-sites ul {
+    width: 1200px;
+    height: 80px;
+    margin: 47px auto;
+}
+#wisdom-sites li {
+    float: left;
+    margin-left: 63px;
+    height: 80px;
+    background: url("../images/ev-ico.png") no-repeat;
+}
+.sites li:nth-child(1) {
+    background-position: 0 0;
+    width: 80px;
+}
+.sites li:nth-child(2) {
+    background-position: -168px 0;
+    width: 86px;
+}
+.sites li:nth-child(3) {
+    background-position: -298px 0;
+    width: 70px;
+}
+.sites li:nth-child(4) {
+    background-position: -428px 0;
+    width: 90px;
+}
+.sites li:nth-child(5) {
+    background-position: -582px 0;
+    width: 58px;
+}
+.sites li:nth-child(6) {
+    background-position: -716px 0;
+    width: 60px;
+}
+.sites li:nth-child(7) {
+    background-position: -826px 0;
+    width: 118px;
+}
+
+/*   wisdom-sites------------------------------------------------end*/
+
+/*   obj*/
+#footer {
+    color: #FFFFFF;
+}
+
+#footer .blank {
+    width: 100%;
+    height: 30px;
+    background-color: #CCCCCC;
+}
+
+#footer .footer-mark {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #333333;
+}
+#footer ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 30px;
+    border: 1px solid red;
+
+}
+.footer-mark li {
+    float: left;
+
+}
+.footer-mark img {
+    width: 37px;
+    height: 29px;
+}
+/*   obj------------------------------------------------end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

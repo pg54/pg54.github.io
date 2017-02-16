@@ -34,7 +34,6 @@
 <div id="page_container">
     <div class="page_wrapper">
         <div class="person_description">
-            <img src="./images/cv/2.png" alt="">
             <span class="hi">Hey,I'm Pan Gang...</span>
             <h2 class="subtitle">I am a web front-end Developer</h2>
             <p class="content">I've been a developer for a year now and I want to find a new full-time job
@@ -143,7 +142,7 @@
             <div class="carousel">
                 <ul class="img-ct">
                     <li data-index=0>
-                        <a href=""><img src="http://cdn.jirengu.com/book.jirengu.com/img/2.jpg" alt="2.jpg"></a>
+                        <a href="./project/wisdom/index.html"><img src="http://7xo5hi.com1.z0.glb.clouddn.com/Snip20170216_wisdom.png" alt="2.jpg"></a>
                     </li>
                     <li data-index=1>
                         <a href="./project/copyAppleWebsite/index.html"><img src="http://7xo5hi.com1.z0.glb.clouddn.com/Snip20170216_apple.png" alt="1.jpg"></a>
@@ -304,8 +303,14 @@
         var country = (response.country);
         //判断国家是否为CN来确定加载中文英语
         if (country === "CN") {
-            var arr = {"#profile": "资料", "#education": "教育", "#experience": "工作经验",
-                '#skills':'技能',"#interests":'兴趣',"#portfolio":'项目',"#contact":'联系',
+            var arr = {
+                "#profile": "资料",
+                "#education": "教育",
+                "#experience": "工作经验",
+                '#skills':'技能',
+                "#interests":'兴趣',
+                "#portfolio":'项目',
+                "#contact":'联系',
                 ".dlResume":"下载简历",
                 ".blog":"博客",
                 ".person_description .hi":"你好,我是刚子",
