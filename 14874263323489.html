@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	JS数组去重 - pg54
+  	前端面试的两个问题 - pg54
   	
 	</title>
 
@@ -118,40 +118,48 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">JS数组去重</h1>
+		<h1 class="title" itemprop="name">前端面试的两个问题</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<p>方法一： 个人最喜欢用</p>
+			<p>今天在知乎上看到一个前辈通过两道面试题感叹面试的水平不行，找不到链接了，大概记得题目。<br/>
+题一：下面这个函数的打印结果</p>
 
-<pre><code>Array.prototype.unique=function(){  
-    var n=[];//一个临时数组  
-    for(var r=0;r&lt;this.length;r++){  
-        if(n.indexOf(this[r])==-1)  
-            n.push(this[r]);  
-    }  
-    return n;  
+<pre><code>for (var i=1;i&lt;10;i++) {
+setTimeout(function(console.log(i);){},0)
 }
 </code></pre>
 
-<p>方法二:一个O2复杂度的写法，弄一个空数组,通过数组判断</p>
+<p>这个是典型的考闭包，打印结果是10个10；<br/>
+正确写法两种，都是一个意思</p>
 
-<pre><code>function unique(arr) {
-    var res = [];
-    for (var i=0,len = arr.length;i&lt;len;i++) {
-        var item = a[i];
-        for (var j=0,jLen = res.length;j&lt;jLen;j++) {
-            if (res[j] === item) {
-                break;
-            }
-            if (j === jLen) {
-                res.push(item);
-            }
-        }
-        return res;
-    }
+<pre><code>for (var i=0;i&lt;10;i++) {
+    (function (i) {
+        setTimeout(function () {
+            console.log(i)
+        },0)
+    })(i)
 }
 </code></pre>
 
-<p>方法三：</p>
+<pre><code>for (var i=0;i&lt;10;i++) {
+    printSome(i)
+}
+function printSome(j) {
+    setTimeout(function () {
+        console.log(j)
+    },0)
+}
+
+</code></pre>
+
+<p>题二：页面上有一个input，我们叫它X吧，用来显示后面两个按钮点击发送ajax请求的结果，两个button分别A和B，依次点击A,B发送ajax请求，因为A的返回数据比较慢，B返回的数据快,X<br/>
+上先显示B的返回内容，后显示A的返回内容。要求根据点击顺序依次返回</p>
+
+<p>这个问题，我已开始是想到用空对象储存,大概如下</p>
+
+<pre><code>var data = {};
+{&#39;1&#39;:resA,
+&#39;2&#39;:resB}
+</code></pre>
 
 		</div>
 	</article>

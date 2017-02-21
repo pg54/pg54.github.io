@@ -4,7 +4,7 @@
   <title><![CDATA[pg54]]></title>
   <link href="https://pg54.github.io/atom.xml" rel="self"/>
   <link href="https://pg54.github.io/"/>
-  <updated>2017-02-10T00:05:35+08:00</updated>
+  <updated>2017-02-10T00:16:06+08:00</updated>
   <id>https://pg54.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,491 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[如何居中一个float:left元素]]></title>
+    <link href="https://pg54.github.io/14876683286762.html"/>
+    <updated>2017-02-21T17:12:08+08:00</updated>
+    <id>https://pg54.github.io/14876683286762.html</id>
+    <content type="html"><![CDATA[
+<p>如下图<br/>
+<img src="media/14876683286762/14876686983828.jpg" alt=""/></p>
+
+<p>这个问题看起来很厉害，其实很简单<br/>
+方法一：</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .box {
+            position: relative;
+            float: left;
+            left: -50%;
+            width: 100px;
+            height: 100px;
+            background: lightcoral;
+        }
+        .con {
+            position: relative;
+            float: left;
+            left: 50%;
+            background-color: cyan;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;con&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><img src="media/14876683286762/14876691237414.jpg" alt=""/></p>
+
+<p><code>给子元素相对定位，是想将相对于父元素来定位自己的位置，float:left让子元素在同一水平线上显示，left:-50%是因为子元素的整体宽度就是父元素的宽度，left:50%就是让子元素内容往相对父元素左上那一点往左移动父元素一半的宽度（right:50%是距右边50%，效果一样），正好实现子元素内容居中显示的效果。</code></p>
+
+<p>方法二：<br/>
+使用js计算，</p>
+
+<pre><code>&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;../js/jquery-1.12.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+         $(&#39;.box&#39;).css({
+              &#39;position&#39; : &#39;relative&#39;,
+              &#39;left&#39; : ($(window).width() - $(&#39;.box&#39;).outerWidth()) / 2 + &#39;px&#39;
+          })
+     &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[前端面试的两个问题]]></title>
+    <link href="https://pg54.github.io/14874263323489.html"/>
+    <updated>2017-02-18T21:58:52+08:00</updated>
+    <id>https://pg54.github.io/14874263323489.html</id>
+    <content type="html"><![CDATA[
+<p>今天在知乎上看到一个前辈通过两道面试题感叹面试的水平不行，找不到链接了，大概记得题目。<br/>
+题一：下面这个函数的打印结果</p>
+
+<pre><code>for (var i=1;i&lt;10;i++) {
+setTimeout(function(console.log(i);){},0)
+}
+</code></pre>
+
+<p>这个是典型的考闭包，打印结果是10个10；<br/>
+正确写法两种，都是一个意思</p>
+
+<pre><code>for (var i=0;i&lt;10;i++) {
+    (function (i) {
+        setTimeout(function () {
+            console.log(i)
+        },0)
+    })(i)
+}
+</code></pre>
+
+<pre><code>for (var i=0;i&lt;10;i++) {
+    printSome(i)
+}
+function printSome(j) {
+    setTimeout(function () {
+        console.log(j)
+    },0)
+}
+
+</code></pre>
+
+<p>题二：页面上有一个input，我们叫它X吧，用来显示后面两个按钮点击发送ajax请求的结果，两个button分别A和B，依次点击A,B发送ajax请求，因为A的返回数据比较慢，B返回的数据快,X<br/>
+上先显示B的返回内容，后显示A的返回内容。要求根据点击顺序依次返回</p>
+
+<p>这个问题，我已开始是想到用空对象储存,大概如下</p>
+
+<pre><code>var data = {};
+{&#39;1&#39;:resA,
+&#39;2&#39;:resB}
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[jQuery懒加载插件]]></title>
+    <link href="https://pg54.github.io/14872953169866.html"/>
+    <updated>2017-02-17T09:35:16+08:00</updated>
+    <id>https://pg54.github.io/14872953169866.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">懒加载原理</h2>
+
+<p><img src="media/14872953169866/14872999663223.jpg" alt=""/></p>
+
+<h3 id="toc_1">JQuery 插件</h3>
+
+<pre><code>(function($) {
+    $.fn.scrollLoading = function(options) {
+        var defaults = {
+            // 在html标签中存放的属性名称；
+            attr: &quot;data-url&quot;,
+            // 父元素默认为window
+            container: window,
+            callback: $.noop
+        };
+        // 不管有没有传入参数，先合并再说；
+        var params = $.extend({}, defaults, options || {});
+        // 把父元素转为jquery对象；
+        var container = $(params.container);
+        // 新建一个数组，然后调用each方法，用于存储每个dom对象相关的数据；
+        params.cache = [];
+        $(this).each(function() {
+            // 取出jquery对象中每个dom对象的节点类型，取出每个dom对象上设置的图片路径
+            var node = this.nodeName.toLowerCase(), url = $(this).attr(params[&quot;attr&quot;]);
+            //重组，把每个dom对象上的属性存为一个对象；
+            var data = {
+                obj: $(this),
+                tag: node,
+                url: url
+            };
+            // 把这个对象加到一个数组中；
+            params.cache.push(data);
+        });
+
+        var callback = function(call) {
+            if ($.isFunction(params.callback)) {
+                params.callback.call(call);
+            }
+        };
+        
+        //每次触发滚动事件时，对每个dom元素与container元素进行位置判断，如果满足条件，就把路径赋予这个dom元素！
+        var loading = function() {
+            // 获取父元素的高度
+            var contHeight = container.outerHeight();
+            var contWidth = container.outerWidth();
+
+            // 获取父元素相对于文档页顶部的距离，这边要注意了，分为以下两种情况；
+            if (container.get(0) === window) {
+                // 第一种情况父元素为window，获取浏览器滚动条已滚动的距离；$(window)没有offset()方法；
+                var contop = $(window).scrollTop();
+                var conleft = $(window).scrollLeft();
+            } else {
+                // 第二种情况父元素为非window元素，获取它的滚动条滚动的距离；
+                var contop = container.offset().top;
+                var conleft = container.offset().left;
+            }
+
+            $.each(params.cache, function(i, data) {
+                var o = data.obj, tag = data.tag, url = data.url, post, posb, posl, posr;
+                if (o) {
+                    //对象顶部与文档顶部之间的距离，如果它小于父元素底部与文档顶部的距离，则说明垂直方向上已经进入可视区域了；
+                    post = o.offset().top - (contop + contHeight);
+                    //对象底部与文档顶部之间的距离，如果它大于父元素顶部与文档顶部的距离，则说明垂直方向上已经进入可视区域了；
+                    posb = o.offset().top + o.height() - contop;
+
+                    // 水平方向上同理；
+                    posl = o.offset().left - (conleft + contWidth);
+                    posr = o.offset().left + o.width() - conleft;
+
+                    // 只有当这个对象是可视的，并且这四个条件都满足时，才能给这个对象赋予图片路径；
+                    if ( o.is(&#39;:visible&#39;) &amp;&amp; (post &lt; 0 &amp;&amp; posb &gt; 0) &amp;&amp; (posl &lt; 0 &amp;&amp; posr &gt; 0) ) {
+                        if (url) {
+                            //在浏览器窗口内
+                            if (tag === &quot;img&quot;) {
+                                //设置图片src
+                                callback(o.attr(&quot;src&quot;, url));
+                            } else {
+                                // 设置除img之外元素的背景url
+                                callback(o.css(&quot;background-image&quot;, &quot;url(&quot;+ url +&quot;)&quot;));
+                            }
+                        } else {
+                            // 无地址，直接触发回调
+                            callback(o);
+                        }
+                        // 给对象设置完图片路径之后，把params.cache中的对象给清除掉；对象再进入可视区，就不再进行重复设置了；
+                        data.obj = null;
+                    }
+                }
+            });
+        };
+        //加载完毕即执行
+        loading();
+        //滚动执行
+        container.bind(&quot;scroll&quot;, loading);
+    };
+})(jQuery);
+</code></pre>
+
+<h2 id="toc_2">使用prototype</h2>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script src=&quot;http://kejian.jirengu.com/static/js/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;图片懒加载-简单&lt;/title&gt;
+    &lt;style&gt;
+        ul,li{
+            list-style:none;
+        }
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .container:after{
+            content: &#39;&#39;;
+            display: block;
+            clear: both;
+        }
+        .container li{
+            float: left;
+            margin: 10px 10px;
+        }
+        .container li img{
+            width: 380px;
+            height: 380px;
+        }
+        p{
+            float: left;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul class=&quot;container&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/1.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/1.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/2.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/3.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/4.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/5.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/6.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/7.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/8.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/9.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/10.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/11.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/12.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/13.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/14.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/15.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/16.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg&quot; data-src=&quot;http://cdn.jirengu.com/book.jirengu.com/img/17.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;p id=&quot;hello&quot;&gt;hello&lt;/p&gt;
+    &lt;p id=&quot;world&quot;&gt;world&lt;/p&gt;
+
+&lt;/ul&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function Exposure($target,callback) {
+        this.$target = $target;
+        this.callback = callback;
+        this.bind();
+        this.check();
+    }
+    Exposure.prototype.bind = function () {
+        var _this = this;
+        $(window).on(&#39;scroll&#39;,function () {
+            _this.check();
+        })
+    }
+    Exposure.prototype.check = function () {
+        if (this.isShow(this.$target)) {
+
+        }
+    }
+    Exposure.prototype.isShow = function () {
+        var windowHeight = $(window).height(),
+                scrollTop = $(window).scrollTop(),
+                offsetTop = this.$target.offset().top,
+                nodeHeight = this.$target.height();
+        if (offsetTop &lt; windowHeight+scrollTop &amp;&amp; offsetTop+nodeHeight&gt;scrollTop) {
+            return true;
+        } else {
+            return false;
+        }
+
+
+    }
+    
+    var Lazy = (function () {
+        return {
+            init: function ($target, callback) {
+                $target.each(function (idx, target) {
+                    new Exposure($(target),callback);
+                })
+            }
+        }
+    })()
+    Lazy.init($(&#39;#hello&#39;),function ($node) {
+        $node.text($node.text()+&#39;123&#39;);
+    })
+    Lazy.init($(&#39;#world&#39;),function ($node) {
+        $node.text($node.text()+&#39;456&#39;);
+    })
+    Lazy.init($(&#39;.container img&#39;), function($node){
+        showImg($node);
+    });
+    function showImg($img){
+        var imgUrl = $img.attr(&#39;data-src&#39;);
+        $img.attr(&#39;src&#39;, imgUrl);
+    }
+    
+
+
+
+
+
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[https科普扫盲]]></title>
+    <link href="https://pg54.github.io/14871255198841.html"/>
+    <updated>2017-02-15T10:25:19+08:00</updated>
+    <id>https://pg54.github.io/14871255198841.html</id>
+    <content type="html"><![CDATA[
+<p><a href="http://www.cnblogs.com/chyingp/p/https-introduction.html">http://www.cnblogs.com/chyingp/p/https-introduction.html</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[组件化]]></title>
+    <link href="https://pg54.github.io/14867942310060.html"/>
+    <updated>2017-02-11T14:23:51+08:00</updated>
+    <id>https://pg54.github.io/14867942310060.html</id>
+    <content type="html"><![CDATA[
+<p>jquery插件<br/>
+<a href="http://www.tuicool.com/articles/rUjIZzb">http://www.tuicool.com/articles/rUjIZzb</a></p>
+
+<h3 id="toc_0">轮播插件</h3>
+
+<ol>
+<li>写好基本的html和css代码</li>
+<li>分析轮播的场景，想象一个轮播对象需要什么，需要一个prev,next按钮，需要pagebar,</li>
+</ol>
+
+<pre><code>
+//        jquery插件
+
+//        1.对jqury自身的的拓展插件
+        $.extend({
+            handleTableUI:function (table) {
+                var thisTabel = $(&#39;#&#39;+table);
+                $(thisTabel).find(&#39;tr&#39;).bind(&#39;mouseover&#39;,function () {
+
+                })
+            }
+        })
+
+//        2.对HTML标记或页面元素进行拓展
+        (function ($) {
+            $.fn.setTableUI = function(options){
+                var defaults = {
+                    eventRowClass:&#39;evenRow&#39;,
+                    oddRowClass:&#39;oddRow&#39;,
+                    activeRowClass:&#39;activeRow&#39;
+                }
+                var options = $.extend(defaults,options);
+                this.each(function () {
+                    var thisTable = $(this);
+
+                })
+            }
+
+        })($)
+
+//        3.不要在页面显式调用jQuery的方法
+        (function ($) {
+            $.tableUI = {set:function () {
+                
+            }}
+            
+        })($)
+
+
+//        选项卡的封装
+
+        var tabCenter = (function () {
+                    var tablist = [];
+
+                    function init($tab,handler) {
+                        $tab.each(function () {
+                            var $cal = $(this);
+                            if($cal.hasClass(&#39;init&#39;)) {
+                                return;
+                            }
+                            tablist.push(new  Tab($cal,handler));
+                            $cal.addClass(&#39;init&#39;);
+                        })
+                    }
+
+                    function Tab($tab,handler) {
+                        this.$tab = $tab;
+                        this.$lis = $tab.find(&#39;li&#39;);
+                        this.$panels = $tab.find(&#39;.panel&#39;);
+                        this.handler = handler;
+                        this.bind();
+                        handler&amp;&amp;handler(this.$panels.eq(0))
+                    }
+
+                    Tab.prototype = {
+                        bind:function () {
+                            var me = this;
+                            this.$lis.on(&#39;click&#39;,function () {
+                                var index = $(this).index();
+                                me.$lis.removeClass(&#39;active&#39;);
+                                me.$lis.eq(index).addClass(&#39;active&#39;);
+
+                                me.$panels.removeClass(&#39;active&#39;);
+                                me.$panels.eq(index).addClass(&#39;active&#39;);
+                            })
+                        }
+                    }
+
+                }
+        )()
+        
+    
+</code></pre>
+
+<pre><code>
+//        建一个池子
+        var carousellist = [];
+        function init($carrousel) {
+            $carrousel.each(function () {
+                var $cal = $(this);
+                if ($cal.hasClass(&#39;init&#39;)){
+                    return;
+                }
+                carousellist.push(new Carousel($cal));
+                $cal.addClass(&#39;init&#39;);
+            })
+        }
+
+        function getList() {
+            return carousellist;
+        }
+</code></pre>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[个人博客国际化解决方案]]></title>
@@ -512,61 +997,43 @@ For absolutely positioned elements (those with position: absolute or position: f
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Vue.js]]></title>
-    <link href="https://pg54.github.io/14863596093783.html"/>
-    <updated>2017-02-06T13:40:09+08:00</updated>
-    <id>https://pg54.github.io/14863596093783.html</id>
-    <content type="html"><![CDATA[
-<h3 id="toc_0">template</h3>
-
-<p><img src="http://ogtnnj4ck.bkt.clouddn.com/14863596325581.jpg" alt=""/></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[JS数组去重]]></title>
     <link href="https://pg54.github.io/14855031116408.html"/>
     <updated>2017-01-27T15:45:11+08:00</updated>
     <id>https://pg54.github.io/14855031116408.html</id>
     <content type="html"><![CDATA[
-<h2 id="toc_0">js的数据类型</h2>
+<p>方法一： 个人最喜欢用</p>
 
-<h3 id="toc_1">数字</h3>
+<pre><code>Array.prototype.unique=function(){  
+    var n=[];//一个临时数组  
+    for(var r=0;r&lt;this.length;r++){  
+        if(n.indexOf(this[r])==-1)  
+            n.push(this[r]);  
+    }  
+    return n;  
+}
+</code></pre>
 
-<h4 id="toc_2">整型直接量</h4>
+<p>方法二:一个O2复杂度的写法，弄一个空数组,通过数组判断</p>
 
-<h4 id="toc_3">浮点型直接量</h4>
+<pre><code>function unique(arr) {
+    var res = [];
+    for (var i=0,len = arr.length;i&lt;len;i++) {
+        var item = a[i];
+        for (var j=0,jLen = res.length;j&lt;jLen;j++) {
+            if (res[j] === item) {
+                break;
+            }
+            if (j === jLen) {
+                res.push(item);
+            }
+        }
+        return res;
+    }
+}
+</code></pre>
 
-<h4 id="toc_4">js中的算术运算</h4>
-
-<h3 id="toc_5">文本</h3>
-
-<h4 id="toc_6">字符串直接量</h4>
-
-<h4 id="toc_7">转义字符</h4>
-
-<h4 id="toc_8">正则表达式</h4>
-
-<h3 id="toc_9">布尔值</h3>
-
-<h3 id="toc_10">null和undefined</h3>
-
-<h3 id="toc_11">NaN</h3>
-
-<h3 id="toc_12">数组</h3>
-
-<h3 id="toc_13">对象</h3>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[http://www.cnblogs.com/zhangxiaohang/p/5499247.html]]></title>
-    <link href="https://pg54.github.io/14852706757930.html"/>
-    <updated>2017-01-24T23:11:15+08:00</updated>
-    <id>https://pg54.github.io/14852706757930.html</id>
-    <content type="html"><![CDATA[
+<p>方法三：</p>
 
 ]]></content>
   </entry>
@@ -644,20 +1111,6 @@ For absolutely positioned elements (those with position: absolute or position: f
     <id>https://pg54.github.io/14849014794672.html</id>
     <content type="html"><![CDATA[
 <p><a href="http://www.ui3g.com/code/uicode-1626.html">http://www.ui3g.com/code/uicode-1626.html</a></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[bootstrap]]></title>
-    <link href="https://pg54.github.io/14847531950663.html"/>
-    <updated>2017-01-18T23:26:35+08:00</updated>
-    <id>https://pg54.github.io/14847531950663.html</id>
-    <content type="html"><![CDATA[
-<p>手机:col-xs-*<br/>
-平板：col-md-*<br/>
-桌面电脑：col-md-*<br/>
-高分辨率设备：col-lg-*</p>
 
 ]]></content>
   </entry>
@@ -1113,31 +1566,6 @@ https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
 <h1 id="toc_0">一起学nodejs</h1>
 
 <p><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb">https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb</a></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[electron项目]]></title>
-    <link href="https://pg54.github.io/14838942123284.html"/>
-    <updated>2017-01-09T00:50:12+08:00</updated>
-    <id>https://pg54.github.io/14838942123284.html</id>
-    <content type="html"><![CDATA[
-<p>京东地址<a href="https://item.jd.com/10929693753.html">https://item.jd.com/10929693753.html</a></p>
-
-<p>大批量图片下载<a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a></p>
-
-<h2 id="toc_0">request 请求到的数据为乱码，求解决</h2>
-
-<p><a href="https://cnodejs.org/topic/545de1e1a68535a174fe51b5">https://cnodejs.org/topic/545de1e1a68535a174fe51b5</a></p>
-
-<h2 id="toc_1">Nodejs大批量下载图片入坑指南(使用async和bagpipe处理大并发量请求)</h2>
-
-<p><a href="http://www.tuicool.com/articles/A3MVNzJ">http://www.tuicool.com/articles/A3MVNzJ</a></p>
-
-<h2 id="toc_2">七牛云js注入</h2>
-
-<p><img src="media/14838942123284/14841883960285.jpg" alt=""/></p>
 
 ]]></content>
   </entry>

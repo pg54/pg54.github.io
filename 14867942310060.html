@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	JS数组去重 - pg54
+  	组件化 - pg54
   	
 	</title>
 
@@ -118,40 +118,120 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">JS数组去重</h1>
+		<h1 class="title" itemprop="name">组件化</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<p>方法一： 个人最喜欢用</p>
+			<p>jquery插件<br/>
+<a href="http://www.tuicool.com/articles/rUjIZzb">http://www.tuicool.com/articles/rUjIZzb</a></p>
 
-<pre><code>Array.prototype.unique=function(){  
-    var n=[];//一个临时数组  
-    for(var r=0;r&lt;this.length;r++){  
-        if(n.indexOf(this[r])==-1)  
-            n.push(this[r]);  
-    }  
-    return n;  
-}
+<h3 id="toc_0">轮播插件</h3>
+
+<ol>
+<li>写好基本的html和css代码</li>
+<li>分析轮播的场景，想象一个轮播对象需要什么，需要一个prev,next按钮，需要pagebar,</li>
+</ol>
+
+<pre><code>
+//        jquery插件
+
+//        1.对jqury自身的的拓展插件
+        $.extend({
+            handleTableUI:function (table) {
+                var thisTabel = $(&#39;#&#39;+table);
+                $(thisTabel).find(&#39;tr&#39;).bind(&#39;mouseover&#39;,function () {
+
+                })
+            }
+        })
+
+//        2.对HTML标记或页面元素进行拓展
+        (function ($) {
+            $.fn.setTableUI = function(options){
+                var defaults = {
+                    eventRowClass:&#39;evenRow&#39;,
+                    oddRowClass:&#39;oddRow&#39;,
+                    activeRowClass:&#39;activeRow&#39;
+                }
+                var options = $.extend(defaults,options);
+                this.each(function () {
+                    var thisTable = $(this);
+
+                })
+            }
+
+        })($)
+
+//        3.不要在页面显式调用jQuery的方法
+        (function ($) {
+            $.tableUI = {set:function () {
+                
+            }}
+            
+        })($)
+
+
+//        选项卡的封装
+
+        var tabCenter = (function () {
+                    var tablist = [];
+
+                    function init($tab,handler) {
+                        $tab.each(function () {
+                            var $cal = $(this);
+                            if($cal.hasClass(&#39;init&#39;)) {
+                                return;
+                            }
+                            tablist.push(new  Tab($cal,handler));
+                            $cal.addClass(&#39;init&#39;);
+                        })
+                    }
+
+                    function Tab($tab,handler) {
+                        this.$tab = $tab;
+                        this.$lis = $tab.find(&#39;li&#39;);
+                        this.$panels = $tab.find(&#39;.panel&#39;);
+                        this.handler = handler;
+                        this.bind();
+                        handler&amp;&amp;handler(this.$panels.eq(0))
+                    }
+
+                    Tab.prototype = {
+                        bind:function () {
+                            var me = this;
+                            this.$lis.on(&#39;click&#39;,function () {
+                                var index = $(this).index();
+                                me.$lis.removeClass(&#39;active&#39;);
+                                me.$lis.eq(index).addClass(&#39;active&#39;);
+
+                                me.$panels.removeClass(&#39;active&#39;);
+                                me.$panels.eq(index).addClass(&#39;active&#39;);
+                            })
+                        }
+                    }
+
+                }
+        )()
+        
+    
 </code></pre>
 
-<p>方法二:一个O2复杂度的写法，弄一个空数组,通过数组判断</p>
-
-<pre><code>function unique(arr) {
-    var res = [];
-    for (var i=0,len = arr.length;i&lt;len;i++) {
-        var item = a[i];
-        for (var j=0,jLen = res.length;j&lt;jLen;j++) {
-            if (res[j] === item) {
-                break;
-            }
-            if (j === jLen) {
-                res.push(item);
-            }
+<pre><code>
+//        建一个池子
+        var carousellist = [];
+        function init($carrousel) {
+            $carrousel.each(function () {
+                var $cal = $(this);
+                if ($cal.hasClass(&#39;init&#39;)){
+                    return;
+                }
+                carousellist.push(new Carousel($cal));
+                $cal.addClass(&#39;init&#39;);
+            })
         }
-        return res;
-    }
-}
-</code></pre>
 
-<p>方法三：</p>
+        function getList() {
+            return carousellist;
+        }
+</code></pre>
 
 		</div>
 	</article>

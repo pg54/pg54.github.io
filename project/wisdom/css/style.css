@@ -51,6 +51,29 @@ a {
     float: left;
     line-height: 40px;
 }
+.search {
+    position: relative;
+}
+.search img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: grey;
+}
+
+.searchInput {
+    display: none;
+}
+.sub {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/search-ico.png) no-repeat;
+    text-indent: -99px;
+}
 
 /*   wisdom-top------------------------------------------------end*/
 
@@ -247,12 +270,23 @@ a {
 .activitiesWrap li {
     float: left;
     margin-right: 2px;
+    position: relative;
+    overflow: hidden;
+
 }
 .activitiesWrap img {
     width: 230px;
     height: 120px;
 }
+.activitiesWrap .cover {
+    width: 230px;
+    height: 120px;
+    background: #B01D25;
+    position: absolute;
+    left: 230px;
+    top: 0;
 
+}
 /*   wisdom-activities------------------------------------------------end*/
 /*   wisdom-sites*/
 #wisdom-sites {
@@ -318,6 +352,7 @@ a {
     margin-top: 30px;
     margin-bottom: 20px;
     background-color: #333333;
+    position: relative;
 }
 #footer ul {
     position: absolute;

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	JS数组去重 - pg54
+  	如何居中一个float:left元素 - pg54
   	
 	</title>
 
@@ -118,40 +118,64 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">JS数组去重</h1>
+		<h1 class="title" itemprop="name">如何居中一个float:left元素</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<p>方法一： 个人最喜欢用</p>
+			<p>如下图<br/>
+<img src="media/14876683286762/14876686983828.jpg" alt=""/></p>
 
-<pre><code>Array.prototype.unique=function(){  
-    var n=[];//一个临时数组  
-    for(var r=0;r&lt;this.length;r++){  
-        if(n.indexOf(this[r])==-1)  
-            n.push(this[r]);  
-    }  
-    return n;  
-}
-</code></pre>
+<p>这个问题看起来很厉害，其实很简单<br/>
+方法一：</p>
 
-<p>方法二:一个O2复杂度的写法，弄一个空数组,通过数组判断</p>
-
-<pre><code>function unique(arr) {
-    var res = [];
-    for (var i=0,len = arr.length;i&lt;len;i++) {
-        var item = a[i];
-        for (var j=0,jLen = res.length;j&lt;jLen;j++) {
-            if (res[j] === item) {
-                break;
-            }
-            if (j === jLen) {
-                res.push(item);
-            }
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .box {
+            position: relative;
+            float: left;
+            left: -50%;
+            width: 100px;
+            height: 100px;
+            background: lightcoral;
         }
-        return res;
-    }
-}
+        .con {
+            position: relative;
+            float: left;
+            left: 50%;
+            background-color: cyan;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;con&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<p>方法三：</p>
+<p><img src="media/14876683286762/14876691237414.jpg" alt=""/></p>
+
+<p><code>给子元素相对定位，是想将相对于父元素来定位自己的位置，float:left让子元素在同一水平线上显示，left:-50%是因为子元素的整体宽度就是父元素的宽度，left:50%就是让子元素内容往相对父元素左上那一点往左移动父元素一半的宽度（right:50%是距右边50%，效果一样），正好实现子元素内容居中显示的效果。</code></p>
+
+<p>方法二：<br/>
+使用js计算，</p>
+
+<pre><code>&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;../js/jquery-1.12.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+         $(&#39;.box&#39;).css({
+              &#39;position&#39; : &#39;relative&#39;,
+              &#39;left&#39; : ($(window).width() - $(&#39;.box&#39;).outerWidth()) / 2 + &#39;px&#39;
+          })
+     &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
 
 		</div>
 	</article>
