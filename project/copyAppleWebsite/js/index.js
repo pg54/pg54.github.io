@@ -3,6 +3,7 @@
  */
 //    轮播组件
 $(function () {
+    
     (function () {
 
         function Carousel($ct) {
@@ -11,7 +12,7 @@ $(function () {
             this.bind();
         }
 
-        Carousel.prototype.init = function() {
+        Carousel.prototype.init = function () {
             var $imgCt = this.$imgCt = this.$ct.find('.img-ct'),
                 $preBtn = this.$preBtn = this.$ct.find('.btn-pre'),
                 $nextBtn = this.$nextBtn = this.$ct.find('.btn-next'),
@@ -20,88 +21,106 @@ $(function () {
             var $firstImg = $imgCt.find('li').first(),
                 $lastImg = $imgCt.find('li').last();
 
-            this.curPageIndex = 0;
-            this.imgLength = $imgCt.children().length;
-            this.isAnimate = false;
-            this.imgWidth = $firstImg.width();
-            this.autoShow = true;
+            this.curPageIndex = 0;  //记录当前页面
+            this.imgLength = $imgCt.children().length;  //轮播页面的个数
+            this.isAnimate = false;  //阻止连按
+            this.imgWidth = $firstImg.width();  //单个页面的宽
 
-            //自动滚动
-            if (this.autoShow) {
-                setInterval(function () {
-                    $nextBtn.click();
-
-                },3500)
-            }
-
+            //hover时显示pre,next按钮
+            (this.$ct).hover(function () {
+                //显示pre,next按钮
+                $preBtn.css('visibility', 'visible');
+                $nextBtn.css('visibility', 'visible');
+            }, function () {
+                //不显示pre,next按钮
+                $preBtn.css('visibility', 'hidden');
+                $nextBtn.css('visibility', 'hidden');
+            })
+            //5-0~5-0
             $imgCt.prepend($lastImg.clone())
             $imgCt.append($firstImg.clone())
-
             $imgCt.width($firstImg.width() * this.$imgCt.children().length)
-            $imgCt.css({
-                'left': '-'+$firstImg.width()
-            })
+            $imgCt.css('left', '-' + this.imgWidth + 'px')
         }
-        Carousel.prototype.bind = function() {
+        Carousel.prototype.bind = function () {
             var _this = this;
-            this.$preBtn.on('click', function(e) {
-                e.preventDefault();
-                _this.playPre();
-            })
+            var timer = null;
+            timer = window.setInterval(function () {
+                _this.playNext(1);
+            }, 1000);
 
-            this.$nextBtn.on('click', function(e) {
+            this.$preBtn.on('click', function (e) {
                 e.preventDefault();
-                _this.playNext();
+                clearInterval(timer);
+                _this.playPre(1);
+
+            })
+            this.$nextBtn.on('click', function (e) {
+                e.preventDefault();
+                clearInterval(timer);
+                _this.playNext(1);
+            });
+
+            this.$bullet.children().each(function (index, element) {
+                $(this).hover(function (e) {
+                    var number = $(this).index();
+                    clearInterval(timer);
+                    if (_this.curPageIndex < number) {
+                        _this.playNext(number - _this.curPageIndex)
+                    } else if (_this.curPageIndex > number) {
+                        _this.playPre(_this.curPageIndex - number)
+                    }
+                }, function (e) {
+
+                })
             })
         }
-        Carousel.prototype.playPre = function() {
+        //暂时没有想到比较好的方法
+        Carousel.prototype.playPre = function (index) {
             var _this = this;
+            //阻止连按
             if (this.isAnimate) return;
             this.isAnimate = true;
             this.$imgCt.animate({
-                left: '+='+_this.imgWidth
-            }, function() {
-                _this.curPageIndex--;
+                left: '+=' + _this.imgWidth * index + 'px'
+            }, function () {
+                _this.curPageIndex -= index;
                 if (_this.curPageIndex < 0) {
-                    _this.$imgCt.css('left', -(_this.imgLength * _this.imgWidth));
+                    _this.$imgCt.css('left', -(_this.imgLength * _this.imgWidth) + 'px');
                     _this.curPageIndex = _this.imgLength - 1
-                    console.log('上一个'+ _this.curPageIndex);
                 }
+                _this.isAnimate = false;
+                _this.setBullet()
             })
-            this.isAnimate = false;
-            this.setBullet()
         }
-        Carousel.prototype.playNext = function() {
+        Carousel.prototype.playNext = function (index) {
             var _this = this;
+            //阻止连按
             if (this.isAnimate) return;
             this.isAnimate = true;
             this.$imgCt.animate({
-                left: '-='+_this.imgWidth
-            }, function() {
-                _this.curPageIndex++;
-                console.log('_this.curPageIndex 1:'+_this.curPageIndex);
+                left: '-=' + _this.imgWidth * index + 'px'
+            }, function () {
+                _this.curPageIndex += index;
                 if (_this.curPageIndex === _this.imgLength) {
-                    console.log('_this.imgWidth:'+_this.imgWidth)
                     _this.$imgCt.css({
-                        'left': '-'+_this.imgWidth
+                        'left': '-' + _this.imgWidth + 'px'
                     })
                     _this.curPageIndex = 0
                 }
+                _this.isAnimate = false;
+                _this.setBullet();
             })
-            _this.isAnimate = false;
-            _this.setBullet();
         }
-        Carousel.prototype.setBullet = function() {
+        Carousel.prototype.setBullet = function () {
             var _this = this;
-            console.log('_this.curPageIndex 2:'+_this.curPageIndex)
             this.$bullet.children()
                 .removeClass('active')
                 .eq(this.curPageIndex)
                 .addClass('active')
         }
-
         $('.carousel').each(function () {
-            new  Carousel($(this));
+            new Carousel($(this));
         })
     })()
 
