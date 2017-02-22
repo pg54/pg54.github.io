@@ -2,9 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06726cc9-cee4-4f31-848c-41f3a5caa509" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/person.html" afterPath="$PROJECT_DIR$/person.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/copyAppleWebsite/js/index.js" afterPath="$PROJECT_DIR$/project/copyAppleWebsite/js/index.js" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/indexStop.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/archives.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14783435823003.html" afterPath="$PROJECT_DIR$/14783435823003.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14783435823004.html" afterPath="$PROJECT_DIR$/14783435823004.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838815183801.html" afterPath="$PROJECT_DIR$/14838815183801.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838815360319.html" afterPath="$PROJECT_DIR$/14838815360319.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838942123284.html" afterPath="$PROJECT_DIR$/14838942123284.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838989155437.html" afterPath="$PROJECT_DIR$/14838989155437.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14838995698291.html" afterPath="$PROJECT_DIR$/14838995698291.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14839727830717.html" afterPath="$PROJECT_DIR$/14839727830717.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14841299770735.html" afterPath="$PROJECT_DIR$/14841299770735.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14841885139585.html" afterPath="$PROJECT_DIR$/14841885139585.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14842009870686.html" afterPath="$PROJECT_DIR$/14842009870686.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14842234853932.html" afterPath="$PROJECT_DIR$/14842234853932.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14844716821556.html" afterPath="$PROJECT_DIR$/14844716821556.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14845291247103.html" afterPath="$PROJECT_DIR$/14845291247103.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14845559322210.html" afterPath="$PROJECT_DIR$/14845559322210.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14847028185426.html" afterPath="$PROJECT_DIR$/14847028185426.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14847531950663.html" afterPath="$PROJECT_DIR$/14847531950663.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14849014794672.html" afterPath="$PROJECT_DIR$/14849014794672.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14850817727599.html" afterPath="$PROJECT_DIR$/14850817727599.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14852688543760.html" afterPath="$PROJECT_DIR$/14852688543760.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14852706757930.html" afterPath="$PROJECT_DIR$/14852706757930.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14855031116408.html" afterPath="$PROJECT_DIR$/14855031116408.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14863596093783.html" afterPath="$PROJECT_DIR$/14863596093783.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14863676717828.html" afterPath="$PROJECT_DIR$/14863676717828.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14864773519870.html" afterPath="$PROJECT_DIR$/14864773519870.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14865207018082.html" afterPath="$PROJECT_DIR$/14865207018082.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14867942310060.html" afterPath="$PROJECT_DIR$/14867942310060.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14871255198841.html" afterPath="$PROJECT_DIR$/14871255198841.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14872953169866.html" afterPath="$PROJECT_DIR$/14872953169866.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14874263323489.html" afterPath="$PROJECT_DIR$/14874263323489.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14876683286762.html" afterPath="$PROJECT_DIR$/14876683286762.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/all.html" afterPath="$PROJECT_DIR$/all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog.html" afterPath="$PROJECT_DIR$/blog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+>>>>>>> refs/remotes/origin/master
     </list>
     <ignored path="MWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,23 +68,37 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="60">
               <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+=======
+            <state relative-caret-position="2445">
+              <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
+>>>>>>> refs/remotes/origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="person.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/person.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="304" column="10" selection-start-line="189" selection-start-column="8" selection-end-line="304" selection-end-column="10" />
+=======
+      <file leaf-file-name="atom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+>>>>>>> refs/remotes/origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,6 +107,84 @@
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
+=======
+      <file leaf-file-name="indexStop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indexStop.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14783435823003.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14783435823003.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="142" column="22" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/all.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="1893" column="0" selection-start-line="1893" selection-start-column="0" selection-end-line="1893" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14847531950663.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14847531950663.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14865207018082.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14865207018082.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-27">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screen.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asset/stylesheets/screen.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="0" column="10875" selection-start-line="0" selection-start-column="10857" selection-end-line="0" selection-end-column="10875" />
+              <folding />
+>>>>>>> refs/remotes/origin/master
             </state>
           </provider>
         </entry>
@@ -75,17 +207,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/14839727830717.html" />
-        <option value="$PROJECT_DIR$/archives.html" />
         <option value="$PROJECT_DIR$/cv.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/asset/stylesheets/cv.css" />
         <option value="$PROJECT_DIR$/project/wisdom/index.html" />
         <option value="$PROJECT_DIR$/project/wisdom/css/style.css" />
         <option value="$PROJECT_DIR$/project/js/index.js" />
         <option value="$PROJECT_DIR$/project/copyAppleWebsite/index.html" />
         <option value="$PROJECT_DIR$/project/copyAppleWebsite/css/style.css" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/person.html" />
         <option value="$PROJECT_DIR$/project/copyAppleWebsite/js/index.js" />
+=======
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/archives.html" />
+        <option value="$PROJECT_DIR$/blog.html" />
+        <option value="$PROJECT_DIR$/indexStop.html" />
+        <option value="$PROJECT_DIR$/14783435823003.html" />
+>>>>>>> refs/remotes/origin/master
       </list>
     </option>
   </component>
@@ -95,8 +233,13 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="-9" />
     <option name="y" value="61" />
+=======
+    <option name="x" value="82" />
+    <option name="y" value="35" />
+>>>>>>> refs/remotes/origin/master
     <option name="width" value="1198" />
     <option name="height" value="769" />
   </component>
@@ -153,11 +296,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wisdom" />
+              <option name="myItemId" value="asset" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -171,46 +310,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
+              <option name="myItemId" value="asset" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wisdom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="copyAppleWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -234,6 +338,9 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="asset" />
+=======
+              <option name="myItemId" value="stylesheets" />
+>>>>>>> refs/remotes/origin/master
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,15 +360,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/project/copyAppleWebsite" />
-      <recent name="$PROJECT_DIR$/project/copyAppleWebsite/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/project/copyAppleWebsite/images" />
       <recent name="$PROJECT_DIR$/project" />
       <recent name="$PROJECT_DIR$/asset/images/apple" />
       <recent name="$PROJECT_DIR$/asset/javascripts/cv" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/copyAppleWebsite" />
+      <recent name="$PROJECT_DIR$/project/copyAppleWebsite/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -345,20 +452,35 @@
       <workItem from="1487139696068" duration="83000" />
       <workItem from="1487140287664" duration="375000" />
       <workItem from="1487212440354" duration="18471000" />
+<<<<<<< HEAD
       <workItem from="1487745965464" duration="410000" />
+=======
+      <workItem from="1487743355383" duration="1803000" />
+>>>>>>> refs/remotes/origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="44948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="61" width="1198" height="769" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="46341000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="82" y="35" width="1198" height="769" extended-state="0" />
+>>>>>>> refs/remotes/origin/master
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20617697" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> refs/remotes/origin/master
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -390,6 +512,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2985">
@@ -419,6 +542,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> refs/remotes/origin/master
     <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -442,7 +567,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archives.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
@@ -487,14 +612,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archives.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/indexStop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
@@ -523,14 +648,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archives.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/indexStop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
@@ -566,14 +691,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archives.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/indexStop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
@@ -603,7 +728,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/indexStop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
           <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
@@ -621,14 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16379">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asset/stylesheets/cv.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3540">
@@ -674,28 +784,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archives.html">
+    <entry file="file://$PROJECT_DIR$/project/wisdom/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="88" column="88" selection-start-line="88" selection-start-column="88" selection-end-line="88" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4184">
-          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+        <state relative-caret-position="165">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/images/apple.svg" />
+    <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/images/image_large.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/images/image_search.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/wisdom/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/project/wisdom/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -722,40 +842,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/wisdom/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="304" column="10" selection-start-line="189" selection-start-column="8" selection-end-line="304" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="162" column="27" selection-start-line="162" selection-start-column="25" selection-end-line="162" selection-end-column="27" />
+          <folding>
+            <marker date="1487214634000" expanded="true" signature="11019:11095" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/stylesheets/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="0" column="10875" selection-start-line="0" selection-start-column="10857" selection-end-line="0" selection-end-column="10875" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14847531950663.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14865207018082.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> refs/remotes/origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="304" column="10" selection-start-line="189" selection-start-column="8" selection-end-line="304" selection-end-column="10" />
+=======
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="142" column="22" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+>>>>>>> refs/remotes/origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1767">
+          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="282">
+          <caret line="1893" column="0" selection-start-line="1893" selection-start-column="0" selection-end-line="1893" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14783435823003.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indexStop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+          <folding />
+>>>>>>> refs/remotes/origin/master
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/copyAppleWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+=======
+        <state relative-caret-position="2445">
+          <caret line="163" column="7" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
+>>>>>>> refs/remotes/origin/master
           <folding />
         </state>
       </provider>
