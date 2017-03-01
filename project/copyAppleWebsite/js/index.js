@@ -3,7 +3,7 @@
  */
 //    轮播组件
 $(function () {
-    
+    //轮播组件
     (function () {
 
         function Carousel($ct) {
@@ -122,27 +122,32 @@ $(function () {
         $('.carousel').each(function () {
             new Carousel($(this));
         })
-    })()
+    })();
 
-//搜索框
-    var searchClose = $('.search_close');
-    var searchBtn = $('.search_contaioner .search_image');
-    var searchBar = $('.search_bar');
-    var searchContainer = $('.search_contaioner');
-    var navbar = $('.navigation_bar');
-    $(function () {
-        searchBtn.on('click', function () {
-            navbar.css('display', 'none');
-            searchContainer.css('display', 'none');
-            searchBar.css('display', 'block')
-            searchClose.css('display','block')
+    //搜索框
+    (function () {
+        var searchClose = $('.search_close');
+        var searchBtn = $('.search_contaioner .search_image');
+        var searchBar = $('.search_bar');
+        var searchContainer = $('.search_contaioner');
+        var navbar = $('.navigation_bar');
+        $(function () {
+            searchBtn.on('click', function () {
+                navbar.css('display', 'none');
+                searchContainer.css('display', 'none');
+                searchBar.css('display', 'block')
+                searchClose.css('display','block')
+            })
+            searchClose.on('click', function () {
+                $(this).css('display','none');
+                navbar.css('display', 'flex');
+                searchContainer.css('display', 'flex');
+                searchBar.css('display', 'none')
+            })
         })
-        searchClose.on('click', function () {
-            $(this).css('display','none');
-            navbar.css('display', 'block');
-            searchContainer.css('display', 'flex');
-            searchBar.css('display', 'none')
-        })
-    })
+        //有网时发ajax请求,获取搜索提示
+        
+    })();
+    
 })
 

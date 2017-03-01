@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <title>Vuejs news demo</title>
+</head>
+<body>
+<div id="app">
+    <legend>
+        NEWS
+    </legend>
+    <div class="block">
+        <select  id="md_name">
+            <option v-for="media in medias" v-bind:value="media.name"> {{ media.name }}</option>
+        </select>
+    </div>
+    <div class="block">
+        <label for="md_sort">time</label>
+        <select id="md_sort">
+            <option value="top">top</option>
+            <option value="latest">latest</option>
+        </select>
+    </div>
+    <div class="block">
+        <button @click="sendMSG">send MSG</button>
+    </div>
+    <ul v-for="newsItem in newsItems" id="news">
+        <li>
+            <img v-bind:src="newsItem.urlToImage">
+            <p>
+                <span>{{ newsItem.author }}</span>
+                <span>{{ newsItem.publishedAt }}</span>
+            </p>
+        </li>
+    </ul>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            seen: false,
+            newsItems: [
+
+            ],
+            medias: [
+                {
+                    name:'ABC News (AU)'
+                },
+                {
+                    name:'Ars Technica'
+                },
+                {
+                    name:'Associated Press'
+                },
+                {
+                    name:'BBC News'
+                },
+                {
+                    name:'BBC Sport'
+                },
+                {
+                    name:'Bild'
+                },
+                {
+                    name:'Bloomberg'
+                }
+
+            ]
+
+        },
+        methods: {
+            sendMSG:function () {
+                var _this = this;
+                //清空newsItems
+                var length = _this.newsItems.length;
+                _this.newsItems.splice(0,length);
+                console.log('length:'+length);
+                var select = document.getElementById('md_name');
+                var name = select.options[select.selectedIndex].value;
+                var sort = document.getElementById('md_sort');
+                var time = sort.options[sort.selectedIndex].value;
+                name = getUrlKey(name);
+                function getUrlKey(name,time) {
+                    if (name === 'ABC News (AU)') {
+                        return 'abc-news-au';
+                    } else {
+                        return name.toLowerCase().replace(/\s/g,'-');
+                    }
+                }
+                sendMSG(name,time);
+                function sendMSG(name,time) {
+                    var baseURL = 'https://newsapi.org/v1/articles?source=buzzfeed&sortBy=top&apiKey=a311086249884f1da16b6bb4b5413e12'
+                    var url = baseURL.replace(/buzzfeed/,name);
+                    url = url.replace(/top/,time);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', url, true);
+                    xhr.send(null);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            console.log(JSON.parse(xhr.responseText).articles);
+                            var arr = JSON.parse(xhr.responseText).articles;
+                            arr.forEach(function (value) {
+                                _this.newsItems.push(value);
+                            });
+                        }
+                    };
+                }
+            }
+        }
+    })
+
+
+</script>
+
+</body>
+</html>

@@ -147,27 +147,21 @@ a {
 
 
 /*   wisdom-slider*/
-#wisdom-slider {
-    width: 100vw;
-    height: 520px;
-}
+/*#wisdom-slider {*/
+    /*width: 100vw;*/
+    /*height: 520px;*/
+/*}*/
 .carousel {
     position: relative;
     width: 100vw;
-    height: 100%;
+    height: 520px;
     overflow: hidden;
 }
 
 .carousel .img-ct {
     position: absolute;
     width: 300vw;
-    height: 100%;
-}
-
-.carousel .img-ct:after {
-    content: '';
-    display: block;
-    clear: both;
+    height: 520px;
 }
 
 .carousel .img-ct>li {
@@ -176,7 +170,7 @@ a {
 
 .carousel .img-ct img {
     width: 100vw;
-    height: 100%;
+    height: 520px;
 }
 
 .carousel .btn {
@@ -214,10 +208,6 @@ a {
 
 .carousel .bullet {
     display: inline-block;
-}
-
-.carousel .bullet:after {
-
 }
 
 .carousel .bullet>li {
