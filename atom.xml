@@ -4,7 +4,7 @@
   <title><![CDATA[pg54]]></title>
   <link href="https://pg54.github.io/atom.xml" rel="self"/>
   <link href="https://pg54.github.io/"/>
-  <updated>2017-03-02T15:23:26+08:00</updated>
+  <updated>2017-03-02T15:28:06+08:00</updated>
   <id>https://pg54.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -19,6 +19,8 @@
     <updated>2017-03-02T10:42:25+08:00</updated>
     <id>https://pg54.github.io/14884225459270.html</id>
     <content type="html"><![CDATA[
+<p>link:<a href="https://t.75team.com/video/play?id=40_160_2017010310473381f66f75-7b47-45fe-b93c-0a34da775c17">https://t.75team.com/video/play?id=40_160_2017010310473381f66f75-7b47-45fe-b93c-0a34da775c17</a></p>
+
 <p>题目:三个状态用红（stop）,绿（pass）,黄（wait）表示，要求用JavaScript让三个状态轮流切换，每个状态的停留时间是2秒。<br/>
 HTML</p>
 

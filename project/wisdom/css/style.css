@@ -239,11 +239,12 @@ a {
 }
 #wisdom-join span {
     display: inline-block;
-    font-size: 48px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0 16px;
     font-style: italic;
     line-height: 96px;
+    color: white;
 }
 
 #wisdom-join li {
@@ -301,7 +302,7 @@ a {
 
 }
 
-#wisdom-sites li {
+.sites li {
     float: left;
     margin-top: 47px;
     margin-left: 60px;
@@ -309,7 +310,7 @@ a {
     background: url("../images/ev-ico.png") no-repeat;
 }
 
-#wisdom-sites li:hover {
+.sites li:hover {
     float: left;
     margin-left: 60px;
     height: 80px;
