@@ -78,14 +78,14 @@
 				<header id="header" class="inner">
 				 
 					
-					<h1><a href="indexStop.html">pg54</a></h1>
+					<h1><a href="index.html">pg54</a></h1>
 					<p class="subtitle"></p>
 					<nav id="main-nav">
 						<ul class="main">
 						
-						  <li id=""><a target="self" href="indexStop.html">Home</a></li>
+						  <li id=""><a target="self" href="index.html">Home</a></li>
 						
-						  <li id=""><a target="_self" href="index.html">Archives</a></li>
+						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
 						
 						</ul>
 					</nav>
@@ -119,6 +119,235 @@
 <div itemscope itemtype="http://schema.org/Blog">
 
 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-03-02T10:42:25+08:00" itemprop="datePublished">2017/3/2</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14884225459270.html" itemprop="url">
+		一道JS的问题</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>题目:三个状态用红（stop）,绿（pass）,黄（wait）表示，要求用JavaScript让三个状态轮流切换，每个状态的停留时间是2秒。<br/>
+HTML</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot; type=&quot;text/css&quot;&gt;
+    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul id=&quot;traffic&quot;&gt;
+    &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>CSS</p>
+
+<pre><code>li {
+    list-style: none;
+}
+
+span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+}
+#traffic.wait li:nth-child(1) span{
+    background-color: yellow;
+}
+
+#traffic.stop li:nth-child(2) span {
+    background-color: red;
+}
+
+#traffic.go li:nth-child(3) span{
+    background-color: green;
+}
+</code></pre>
+
+<p>看到这个题目第一时间想到的就是setTimeout()的嵌套</p>
+
+<pre><code>//版本一
+window.onload = function () {
+    const traffic = document.getElementById(&#39;traffic&#39;);
+    (function reset() {
+        traffic.className = &#39;wait&#39;;
+        setTimeout(function () {
+            traffic.className = &#39;stop&#39;;
+            setTimeout(function () {
+                traffic.className = &#39;go&#39;;
+                setTimeout(reset,2000)
+            },2000)
+        },2000)
+    })()
+
+}
+</code></pre>
+
+<p>这样写，可以解决问题，但是耦合性太强了，陷入callback hell，改一下代码</p>
+
+<pre><code>// 版本二
+window.onload = function () {
+    const traffic = document.getElementById(&#39;traffic&#39;);
+    var stateList = [&#39;wait&#39;,&#39;stop&#39;,&#39;go&#39;];
+    var currentStateIndex = 0;
+    setInterval(function () {
+        var state = stateList[currentStateIndex];
+        traffic.className = state;
+        currentStateIndex = (currentStateIndex + 1) % stateList.length;
+    },2000)
+}
+</code></pre>
+
+<p>根据灯状态的不同，建立一个数组，(currentStateIndex + 1) % stateList.length实现数组能够循环，比较好了，但是没有封装性，<br/>
+我们继续修改</p>
+
+<pre><code>// 版本三
+window.onload = function () {
+    const traffic = document.getElementById(&#39;traffic&#39;);
+
+    function start(traffic, stateList) {
+        var currentStateIndex = 0;
+        setInterval(function () {
+            var state = stateList[currentStateIndex];
+            traffic.className = state;
+            currentStateIndex = (currentStateIndex + 1) % stateList.length;
+        }, 2000)
+    }
+    start(traffic,[&#39;wait&#39;,&#39;stop&#39;,&#39;go&#39;]);
+}
+</code></pre>
+
+<p>写了一个start（）方法，暴露出作用对象，状态数组，在其他的地方也可以使用<br/>
+下面我们从函数式编程考虑，事件驱动，</p>
+
+<pre><code>// 版本四
+window.onload = function () {
+    const traffic = document.getElementById(&#39;traffic&#39;);
+    function poll(...fnList) {
+        let stateIndex = 0;
+        return function (...args) {
+            let fn = fnList[stateIndex++%fnList.length];
+            return fn.apply(this,args);
+        }
+    }
+    function setState(state) {
+        traffic.className = state;
+    }
+    let trafficStatePoll = poll(setState.bind(null,&#39;wait&#39;),setState.bind(null,&#39;stop&#39;),setState.bind(null,&#39;go&#39;));
+    setInterval(trafficStatePoll,2000);
+}
+</code></pre>
+
+<p>现在我们更改一下需求，间隔时间分别是1，2，3秒</p>
+
+<pre><code>//现在改需求,1,2,3秒间隔,方案五
+window.onload = function () {
+    const traffic = document.getElementById(&#39;traffic&#39;);
+    function wait(time) {
+        return new  Promise(resolve =&gt; setTimeout(resolve,time));
+    }
+    function setState(state) {
+        traffic.className = state;
+    }
+    function reset() {
+        Promise.resolve()
+            .then(setState.bind(null,&#39;wait&#39;))
+            .then(wait.bind(null,1000))
+            .then(setState.bind(null,&#39;stop&#39;))
+            .then(wait.bind(null,2000))
+            .then(setState.bind(null,&#39;go&#39;))
+            .then(wait.bind(null,3000))
+    }
+    reset();
+
+}
+</code></pre>
+
+<p>这里我们使用promise解决问题，抽象出了wait方法。</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-02-24T16:45:20+08:00" itemprop="datePublished">2017/2/24</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14879259203305.html" itemprop="url">
+		手机活动页</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>慕课慕课迎春16春节贺卡.<br/>
+<a href="http://www.imooc.com/learn/597">http://www.imooc.com/learn/597</a></p>
+
+<h4 id="toc_0">没怎么看视屏，自己试着做了下，有3个问题</h4>
+
+<ol>
+<li>跳转到page3时背景不见了</li>
+<li>使用anywhere和二维码生成器在安卓手机上看效果，跳转到第三页可以看到第二页的旋转</li>
+</ol>
+
+<h4 id="toc_1">现在来解决问题</h4>
+
+<p>首先解决第二个问题，</p>
+
+<p>有两个问题网上找不到解决方法：<br/>
+1. vue-cli · Failed to download repo vuejs-templates/webpack: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:8118<br/>
+2. </p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2017-02-24T00:02:39+08:00" itemprop="datePublished">2017/2/24</time>
+			</div>
+			
+			 
+			
+		</div>
+		<h1 class="title" itemprop="name"><a href="14878657593693.html" itemprop="url">
+		译文</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p><a href="http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx/">http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx/</a></p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
@@ -213,8 +442,10 @@
 题一：下面这个函数的打印结果</p>
 
 <pre><code>for (var i=1;i&lt;10;i++) {
-setTimeout(function(console.log(i);){},0)
-}
+        setTimeout(function(){
+            console.log(i)
+        },0)
+    }
 </code></pre>
 
 <p>这个是典型的考闭包，打印结果是10个10；<br/>
@@ -267,10 +498,28 @@ function printSome(j) {
 			
 		</div>
 		<h1 class="title" itemprop="name"><a href="14872953169866.html" itemprop="url">
-		jQuery懒加载插件</a></h1>
+		jQuery插件</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<h2 id="toc_0">懒加载原理</h2>
+			<p>jQuery插件有两种方式<br/>
+1.jQuery对象的静态方法</p>
+
+<pre><code>//直接给jquery增加静态方法
+$.extend({
+    sayHello: function (name) {
+        console.log(&#39;HeLLO,&#39; + (name ? name : &#39;Dude&#39;) + &#39;!&#39;);
+    }
+})
+</code></pre>
+
+<p>2.jQuery的实例方法</p>
+
+<pre><code>$.fn.toRed = function () {
+    this.css(&#39;color&#39;, &#39;red&#39;);
+}
+</code></pre>
+
+<h2 id="toc_0">懒加载原理</h2>
 
 <p><img src="media/14872953169866/14872999663223.jpg" alt=""/></p>
 
@@ -539,15 +788,7 @@ function printSome(j) {
 		组件化</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<p>jquery插件<br/>
-<a href="http://www.tuicool.com/articles/rUjIZzb">http://www.tuicool.com/articles/rUjIZzb</a></p>
-
-<h3 id="toc_0">轮播插件</h3>
-
-<ol>
-<li>写好基本的html和css代码</li>
-<li>分析轮播的场景，想象一个轮播对象需要什么，需要一个prev,next按钮，需要pagebar,</li>
-</ol>
+			<h2 id="toc_0">轮播插件</h2>
 
 <pre><code>
 //        jquery插件
@@ -1890,7 +2131,7 @@ https://xxxx.com/gift/send?target=someone&amp;giftID=ab231<br/>
 <nav id="pagenavi">
 	 
 	
-	<div class="center"><a href="index.html">Blog Archives</a></div>
+	<div class="center"><a href="archives.html">Blog Archives</a></div>
 
 </nav>
 

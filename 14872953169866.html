@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	jQuery懒加载插件 - pg54
+  	jQuery插件 - pg54
   	
 	</title>
 
@@ -78,14 +78,14 @@
 				<header id="header" class="inner">
 				 
 					
-					<h1><a href="indexStop.html">pg54</a></h1>
+					<h1><a href="index.html">pg54</a></h1>
 					<p class="subtitle"></p>
 					<nav id="main-nav">
 						<ul class="main">
 						
-						  <li id=""><a target="self" href="indexStop.html">Home</a></li>
+						  <li id=""><a target="self" href="index.html">Home</a></li>
 						
-						  <li id=""><a target="_self" href="index.html">Archives</a></li>
+						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
 						
 						</ul>
 					</nav>
@@ -118,9 +118,27 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">jQuery懒加载插件</h1>
+		<h1 class="title" itemprop="name">jQuery插件</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<h2 id="toc_0">懒加载原理</h2>
+			<p>jQuery插件有两种方式<br/>
+1.jQuery对象的静态方法</p>
+
+<pre><code>//直接给jquery增加静态方法
+$.extend({
+    sayHello: function (name) {
+        console.log(&#39;HeLLO,&#39; + (name ? name : &#39;Dude&#39;) + &#39;!&#39;);
+    }
+})
+</code></pre>
+
+<p>2.jQuery的实例方法</p>
+
+<pre><code>$.fn.toRed = function () {
+    this.css(&#39;color&#39;, &#39;red&#39;);
+}
+</code></pre>
+
+<h2 id="toc_0">懒加载原理</h2>
 
 <p><img src="media/14872953169866/14872999663223.jpg" alt=""/></p>
 

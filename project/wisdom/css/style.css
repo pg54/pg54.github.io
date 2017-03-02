@@ -2,6 +2,7 @@
 body,ul,ol,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select {
     padding: 0;
     margin: 0;
+    font-size: 1.5625vw;
 }
 li {
     list-style: none;
@@ -24,6 +25,14 @@ a {
     -o-transform: skew(-16deg,0);
     transform: skew(-16deg,0);
 }
+.skew16 {
+    -webkit-transform: skew(16deg,0);
+    -moz-transform: skew(16deg,0);
+    -o-transform: skew(16deg,0);
+    -ms-transform: skew(16deg,0);
+    transform: skew(16deg,0);
+}
+
 /*   wisdom-top*/
 #wisdom-top {
     width: 100%;
@@ -35,12 +44,20 @@ a {
     top: 0;
     left: 0;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+.search-bar {
+    display: none;
+    border: 2px solid white;
+    height: 20px;
 }
 .stock {
     line-height: 40px;
     width: 600px;
     margin: 0 auto;
     text-align: center;
+    font-size: .5rem;
 }
 .action {
     position: absolute;
@@ -51,28 +68,9 @@ a {
     float: left;
     line-height: 40px;
 }
-.search {
-    position: relative;
-}
-.search img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: grey;
-}
-
 .searchInput {
-    display: none;
-}
-.sub {
-    content: '';
-    position: absolute;
-    left: 5px;
-    top: 4px;
-    width: 15px;
-    height: 15px;
-    background: url(../images/search-ico.png) no-repeat;
-    text-indent: -99px;
+    width: 100px;
+    height: 40px;
 }
 
 /*   wisdom-top------------------------------------------------end*/
@@ -101,7 +99,7 @@ a {
 }
 .navbar {
     position: absolute;
-    width: 856px;
+    width: 1000px;
     height: 40px;
     left: 424px;
     top: 10px;
@@ -231,6 +229,14 @@ a {
     height: 96px;
     background-color: #333333;
 }
+.join-content {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+.timebar {
+    display: inline-block;
+}
 #wisdom-join span {
     display: inline-block;
     font-size: 48px;
@@ -239,8 +245,11 @@ a {
     font-style: italic;
     line-height: 96px;
 }
+
 #wisdom-join li {
     float: left;
+    font-size: 2rem;
+
 }
 /*   wisdom-join------------------------------------------------end*/
 
@@ -248,7 +257,6 @@ a {
 #wisdom-activities {
     width: 100%;
     height: 200px;
-    /*padding: 40px auto;*/
     background: #CCCCCC;
     border-top: #D51D29 4px solid;
 }
@@ -283,16 +291,29 @@ a {
     width: 100%;
     height: 154px;
 }
-#wisdom-sites ul {
-    width: 1200px;
-    height: 80px;
-    margin: 47px auto;
+
+.sites-contents {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
 }
+#wisdom-sites ul {
+
+}
+
 #wisdom-sites li {
     float: left;
-    margin-left: 63px;
+    margin-top: 47px;
+    margin-left: 60px;
     height: 80px;
     background: url("../images/ev-ico.png") no-repeat;
+}
+
+#wisdom-sites li:hover {
+    float: left;
+    margin-left: 60px;
+    height: 80px;
+    background: url("../images/ev-ico1.png") no-repeat;
 }
 .sites li:nth-child(1) {
     background-position: 0 0;
